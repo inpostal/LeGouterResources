@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+
+    <link rel="stylesheet" href="./Sam_CSS/style_member_data.css">
+</head>
+
+<body>
+    <header>
+        <a href="" id="header">Le Goûter</a>
+    </header>
+    <section id="main-container">
+        <aside id="left-side">
+            <ul id="ul">
+                <li class="list">會員資料</li>
+                <li class="list">甜點訂單查詢</li>
+                <li class="list">課程訂單查詢</li>
+                <li class="list">團購訂單查詢</li>
+                <li class="list">優惠券</li>
+            </ul>
+        </aside>
+
+        <section id="msg-container">
+            <section id="msg-container-title">
+                <p id="msg-container-title-p">會員資料</p>
+            </section>
+            <hr id="msg-container-hr">
+            <section id="msg-container-main">
+                <section id="member-data-section">
+                    <div id="member-info">
+                        <div class="member-info-item">
+                            <label for="name">名稱:</label>
+                            <span id="name">John Doe</span>
+                            <input id="name-input" class="hidden-input">
+                        </div>
+                        <div class="member-info-item">
+                            <label for="identity">身份:</label>
+                            <span id="identity">一般會員</span>
+                        </div>
+                        <div class="member-info-item">
+                            <label for="account">帳號:</label>
+                            <span id="account">john.doe@example.com</span>
+                            <input id="account-input" class="hidden-input">
+                        </div>
+                        <div class="member-info-item">
+                            <label for="gender">性別:</label>
+                            <span id="gender">男性</span>
+                            <input id="gender-input" class="hidden-input">
+                        </div>
+                        <div class="member-info-item">
+                            <label for="phone">手機號碼:</label>
+                            <span id="phone">0912345678</span>
+                            <input id="phone-input" class="hidden-input">
+                        </div>
+                        <div class="member-info-item">
+                            <label for="email">信箱:</label>
+                            <span id="email">john.doe@example.com</span>
+                            <input id="email-input" class="hidden-input">
+                        </div>
+                        <div class="member-info-item">
+                            <label for="address">地址:</label>
+                            <span id="address">台北市中山區</span>
+                            <input id="address-input" class="hidden-input">
+                        </div>
+                        <div class="member-info-item">
+                            <label for="birthday">生日:</label>
+                            <span id="birthday">1990-01-01</span>
+                        </div>
+                        <div class="member-info-item">
+                            <label for="registration-date">註冊日期:</label>
+                            <span id="registration-date">2022-05-01</span>
+                        </div>
+                    </div>
+
+                </section>
+                <button type="text" id="update">修改會員資料</button>
+            </section>
+        </section>
+    </section>
+    <footer>
+        Le Goûter
+    </footer>
+
+    <script>
+        window.onload = function () {
+            document.getElementById('update').addEventListener('click', function () {
+                var button = document.getElementById('update');
+                var infoItems = ['name', 'account', 'gender', 'phone', 'email', 'address'];
+
+                if (button.textContent === '修改會員資料') {
+                    infoItems.forEach(function (item) {
+                        var span = document.getElementById(item);
+                        var input = document.getElementById(item + '-input');
+                        var parentDiv = input.parentNode;
+                        input.value = span.textContent;
+                        input.classList.add('on');
+                        span.classList.add('-on');
+                        parentDiv.style.display = 'flex'; 
+                    });
+                    button.textContent = '修改完成';
+                } else {
+                    infoItems.forEach(function (item) {
+                        var span = document.getElementById(item);
+                        var input = document.getElementById(item + '-input');
+                        var parentDiv = input.parentNode;
+                        span.textContent = input.value;
+                        input.classList.remove('on');
+                        span.classList.remove('-on');
+                        parentDiv.style.display = ''; 
+                    });
+                    button.textContent = '修改會員資料';
+
+                }
+            });
+
+
+            // document.getElementById("update").addEventListener("click", function () {
+            //     // 獲取需要修改的元素
+            //     const items = ["address", "email", "phone", "gender", "account", "name"];
+            //     // 遍歷每個元素
+            //     for (let item of items) {
+            //         // 獲取span和input元素
+            //         const span = document.getElementById(item);
+            //         const input = document.getElementById(item + "-input");
+            //         // 更新類別
+            //         span.className = "-on";
+            //         input.className = "on";
+            //         // 複製值
+            //         input.value = span.textContent;
+            //     }
+            //     // 改變按鈕的名稱
+            //     this.textContent = "修改完成";
+            // });
+        };
+    </script>
+</body>
+
+</html>
