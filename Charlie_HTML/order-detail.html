@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 訂單詳情 </title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="static/css/css2.css" rel="stylesheet">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.min.css" type="text/css">
+    <!-- Bootstrap Docs -->
+    <link rel="stylesheet" href="static/css/bootstrap-docs.css" type="text/css">
+
+
+    <!-- Main style file -->
+    <link rel="stylesheet" href="static/css/app.min.css" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="static/css/1css2.css" rel="stylesheet">
+
+    <link href="static/css/all.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="static/css/1animate.min.css" rel="stylesheet">
+    <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/Sam_CSS/style_member_data.css"> -->
+</head>
+
+<body>
+
+    <section id="main-container">
+        <aside id="left-side">
+            <ul id="ul">
+                <li class="list">會員資料</li>
+                <li class="list">甜點訂單查詢</li>
+                <li class="list">課程訂單查詢</li>
+                <li class="list">團購訂單查詢</li>
+                <li class="list">優惠券</li>
+            </ul>
+        </aside>
+    </section>
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+
+    <div class="container-fluid top-bar bg-dark text-light px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <!-- <li class="breadcrumb-item"><a class="small text-light" href="#">Home</a></li>
+            <li class="breadcrumb-item"><a class="small text-light" href="#">Career</a></li>
+            <li class="breadcrumb-item"><a class="small text-light" href="#">Terms</a></li>
+            <li class="breadcrumb-item"><a class="small text-light" href="#">Privacy</a></li> -->
+                </ol>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <a href="index1.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0">Le Goûter</h1>
+        </a>
+
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="" class="nav-item nav-link active">首頁</a>
+                <a href="" class="nav-item nav-link">最新消息</a>
+                <a href="" class="nav-item nav-link">關於我們</a>
+                <a href="" class="nav-item nav-link">甜點商城</a>
+                <a href="" class="nav-item nav-link">課程專區</a>
+                <a href="" class="nav-item nav-link">團購專區</a>
+                <a href="" class="nav-item nav-link">會員專區</a>
+                <a href="" class="nav-item nav-link">優惠券專區</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">其他</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="" class="dropdown-item">FAQ</a>
+                        <a href="" class="dropdown-item">聯絡客服</a>
+                    </div>
+                </div>
+            </div>
+            <div class=" d-none d-lg-flex">
+
+                <a href="cart.html" class="nav-item nav-link">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                </a>
+
+
+                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                    <i class="fa fa-phone text-primary"></i>
+                </div>
+                <div class="ps-3">
+                    <small class="text-primary mb-0">聯絡我們</small>
+                    <p class="text-light fs-5 mb-0">0912345678</p>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    </div>
+    <!-- ./ header -->
+
+    <!-- content -->
+    <div class="content " style="margin-top: 150px;">
+
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="mb-5 d-flex align-items-center justify-content-between">
+                            <span>訂單編號 : <a href="#">#5355619</a></span>
+                            <span class="badge bg-success">Completed</span>
+                        </div>
+                        <div class="row mb-5 g-4">
+                            <div class="col-md-3 col-sm-6">
+                                <p class="fw-bold">訂單日期</p>
+                                16/06/2021 at 04:23 PM
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <p class="fw-bold">收件人</p>
+                                Sayres Seater
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <p class="fw-bold">Email</p>
+                                sayres@sayres.com
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <p class="fw-bold">聯絡電話</p>
+                                767-251-8637
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="card">
+                                    <div class="card-body d-flex flex-column gap-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="mb-0">收件人地址</h5>
+
+                                        </div>
+
+                                        <div>Josephin Villa</div>
+                                        <div>81 Fulton Park, Brazil/Pedro Leopoldo</div>
+                                        <div>
+                                            <i class="bi bi-telephone me-2"></i> 408-963-7769
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card widget">
+                    <h5 class="card-header">訂購甜點品項</h5>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-custom mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>甜點圖示</th>
+                                        <th>甜點名稱</th>
+                                        <th>數量</th>
+                                        <th>單價</th>
+                                        <th>小計</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <img src="static/picture/3.jpg" class="rounded" width="60" alt="...">
+                                            </a>
+                                        </td>
+                                        <td>Digital clock</td>
+                                        <td>1</td>
+                                        <td>$1.190,90</td>
+                                        <td>$1.190,90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <img src="static/picture/4.jpg" class="rounded" width="60" alt="...">
+                                            </a>
+                                        </td>
+                                        <td>Toy car</td>
+                                        <td>2</td>
+                                        <td>$139,58</td>
+                                        <td>$279,16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <img src="static/picture/5.jpg" class="rounded" width="60" alt="...">
+                                            </a>
+                                        </td>
+                                        <td>Sunglasses</td>
+                                        <td>1</td>
+                                        <td>$50,90</td>
+                                        <td>$50,90</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mt-4 mt-lg-0">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h6 class="card-title mb-4">訂單金額</h6>
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-4 text-end">甜點金額 :</div>
+                            <div class="col-4">$1.520,96</div>
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-4 text-end">運費 :</div>
+                            <div class="col-4">Free</div>
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-4 text-end">折價券 :</div>
+                            <div class="col-4">-$27</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-4 text-end">
+                                <strong>訂單總金額 :</strong>
+                            </div>
+                            <div class="col-4">
+                                <strong>$1.794,73</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- ./ content -->
+    </div>
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">粉絲專頁</h4>
+
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">關於我們</h4>
+                    <a class="btn btn-link" href="">認識Le Goûter</a>
+                    <a class="btn btn-link" href="">最新消息</a>
+                    <a class="btn btn-link" href="">甜點商城</a>
+                    <a class="btn btn-link" href="">課程專區</a>
+                    <a class="btn btn-link" href="">團購專區</a>
+                    <a class="btn btn-link" href="">服務條款</a>
+                    <a class="btn btn-link" href="">隱私政策</a>
+                    <a class="btn btn-link" href="">聯絡我們</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">常見問題</h4>
+                    <a class="btn btn-link" href="">註冊登入</a>
+                    <a class="btn btn-link" href="">FAQ</a>
+                    <a class="btn btn-link" href="">回報客服</a>
+                    <a class="btn btn-link" href="">購物須知</a>
+                    <a class="btn btn-link" href="">退款政策</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4"></h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" src="static/picture/product-1.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" src="static/picture/product-2.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" src="static/picture/product-3.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" src="static/picture/product-2.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" src="static/picture/product-3.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light rounded p-1" src="static/picture/product-1.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 版權所有 -->
+
+
+    <script data-cfasync="false" src="static/js/email-decode.min.js"></script>
+    <script src="static/js/jquery-3.4.1.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/bootstrap.bundle.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/wow.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/easing.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/waypoints.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/counterup.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/owl.carousel.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+
+    <script src="static/js/main.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="static/js/rocket-loader.min.js" data-cf-settings="0080e6b992b21508d4c0eeae-|49" defer=""></script>
+
+
+
+    </div>
+    <!-- ./ layout-wrapper -->
+
+    <!-- Bundle scripts -->
+    <script src="static/js/bundle.js"></script>
+
+    <!-- Examples -->
+    <script src="static/js/orders.js"></script>
+
+    <!-- Main Javascript file -->
+    <script src="static/js/app.min.js"></script>
+</body>
+
+</html>
