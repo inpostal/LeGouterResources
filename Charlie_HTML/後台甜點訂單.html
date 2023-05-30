@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>後台甜點訂單管理</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="static/css/css2.css" rel="stylesheet">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="static/css/bootstrap-icons.min.css" type="text/css">
+    <!-- Bootstrap Docs -->
+    <link rel="stylesheet" href="static/css/bootstrap-docs.css" type="text/css">
+
+    
+    <!-- Main style file -->
+    <link rel="stylesheet" href="static/css/app.min.css" type="text/css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: -1;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+
+        }
+
+        .accordion-button {
+            padding: 1rem 2rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            padding: 1rem 2rem;
+        }
+
+        .main-title {
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 0px;
+            background-color: #1E1916;
+            font-family: 'Comic Sans MS';
+            font-size: 30px;
+            padding: 15px;
+            width: 100%;
+
+        }
+
+        .accordion-button {
+            background-color: #1E1916;
+            color: #FAEBD7;
+            border: -1px;
+        }
+
+        .list-group-item-action {
+            background-color: #1E1916;
+            color: #FAEBD7;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #1E1916 !important;
+            color: #FAEBD7 !important;
+            margin-bottom: 1px;
+            border-inline-color: #FAEBD7;
+        }
+
+        element.style {
+            margin-right: 0px;
+        }
+
+        .col-10 {
+            background-color: #FAEBD7;
+            height: 100vh;
+        }
+
+        .col-2 {
+            background-color: #1E1916;
+            height: 100vh;
+            margin-right: 0px;
+            border-color: transparent;
+        }
+
+
+        .row {
+            --bs-gutter-x: 0 rem;
+            height: 100%;
+        }
+
+
+
+        h1 {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #FAEBD7 !important;
+            background-color: #1E1916;
+            margin-bottom: 1px;
+            border-inline-color: #FAEBD7;
+            text-align: center;
+            font-size: 40px;
+            margin-left: -3px;
+            margin-right: 0px;
+        }
+
+        .accordion-button:focus {
+            z-index: 3;
+            border-color: #FAEBD7;
+
+        }
+
+
+
+        .list-group-item:visited {
+            background-color: #1E1916;
+            color: #FAEBD7;
+
+
+
+        }
+
+        .list-group-item {
+            margin-left: -3px;
+        }
+
+        .accordion-button {
+            color: #FAEBD7;
+            margin-left: -3px;
+            margin-right: 0px;
+        }
+
+        .accordion-header {
+            border-bottom: 1px solid #d7b8b8;
+        }
+
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl,
+        .container-xxl {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, 0rem);
+            padding-left: var(--bs-gutter-x, 0rem);
+            margin-right: 0 px;
+            margin-left: 0 px;
+        }
+    </style>
+
+<body>
+
+    <div class="container-fluid whole page">
+        <!-- 頁頭 -->
+        <div class="row">
+            <div class="col-12">
+                <div class="main-title">Le Gouter管理系統</div>
+            </div>
+        </div>
+        <!-- 側邊欄位 -->
+        <div class="row">
+            <div class="col-2">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h1 class="main-menu">Main menu</h1>
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fas fa-home"> 會員管理系統</i>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse  " aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>會員權限管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>會員資料管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>優惠管理</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-user"> 網站管理系統</i>
+                            </button>
+                        </h2>
+
+                        <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action "><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>即時客服</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>輪播圖管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>最新消息管理</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-address-card"> 團購管理系統</i>
+                            </button>
+                        </h2>
+
+                        <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>團購商品管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>團購參與者訂單管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>團購方案管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>團購活動管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>團購分潤管理</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="fas fa-address-card"> 課程管理系統</i>
+                            </button>
+                        </h2>
+
+                        <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>課程訂單管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>課程資訊審核管理</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <i class="fas fa-blog"> 主廚管理</i>
+                            </button>
+                        </h2>
+
+                        <div id="collapseFive" class="accordion-collapse collapse " aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>主廚資料管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>課程討論區管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>課程資訊管理</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <i class="fas fa-address-book"> 甜點管理系統</i>
+                            </button>
+                        </h2>
+
+
+                        <div id="collapseSix" class="accordion-collapse collapse " aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>甜點訂單管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>甜點商品管理</a>
+                                <a href="#" class="list-group-item list-group-item-action"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg> 甜點追蹤清單管理</a>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <i class="fas fa-map-pin"> 員工管理系統</i>
+                                </button>
+                            </h2>
+
+                            <div id="collapseSeven" class="accordion-collapse collapse " aria-labelledby="headingSeven"
+                                data-bs-parent="#accordionExample">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                        </svg>員工資料管理</a>
+                                    <a href="#" class="list-group-item list-group-item-action"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-caret-right-fill me-2" viewBox="0 0 16 16">
+                                            <path
+                                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                        </svg>員工權限管理</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-lg" value="log-out"
+                    onclick="location.href='要前往的網頁連結'" style="width: 303px;height:90px;background-color:#1E1916;border-color:#d7b8b8;text-align:justify
+                    ;margin-left:-3px;padding-left:40px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="14" fill="currentColor" class="bi bi-box-arrow-in-left me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z" />
+                        <path fill-rule="evenodd"
+                            d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                    </svg>登出</button>
+                <h3 style="background-color: #1E1916;border-color:#1E1916; height:260px;width:80px; ;"></h3>
+            </div>
+            <!-- 主要內容 -->
+            <div class="col-10">
+                  <!-- header -->
+
+
+ 
+    <!-- content -->
+    <div class="content " style="margin-top: 100px;">
+        
+  
+
+        <div class="card">
+            <div class="card-body">
+                <div class="d-md-flex gap-4 align-items-center">
+                    <div class="d-none d-md-flex">甜點訂單</div>
+                    <div class="d-md-flex gap-4 align-items-center">
+                        <form class="mb-3 mb-md-0">
+                            <div class="row g-3">
+                                <div class="col-md-3">  
+                                    <select class="form-select">
+                                        <option>Sort by</option>
+                                        <option value="desc">Desc</option>
+                                        <option value="asc">Asc</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="查詢">
+                                        <button class="btn btn-outline-light" type="button">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="dropdown ms-auto">
+                        <a href="#" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-haspopup="true" aria-expanded="false">Actions</a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#" class="dropdown-item">Action</a>
+                            <a href="#" class="dropdown-item">Another action</a>
+                            <a href="#" class="dropdown-item">Something else here</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    
+        <div class="table-responsive">
+            <table class="table table-custom table-lg mb-0" id="orders">
+                <thead>
+                <tr>
+                    <!-- <th>
+                        <input class="form-check-input select-all" type="checkbox" data-select-all-target="#orders" id="defaultCheck1">
+                    </th> -->
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3210</a>
+                    </td>
+                    <td>Cortie Gemson</td>
+                    <td>May 23, 2021</td>
+                    <td>$239,00</td>
+                    <td>
+                        <span class="badge bg-primary">Processing</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="order-detail.html" class="dropdown-item">詳細資訊</a>
+                                    <a href="#" class="dropdown-item">編輯</a>
+                                    <a href="#" class="dropdown-item">刪除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3211</a>
+                    </td>
+                    <td>Mathilde Tumilson</td>
+                    <td>May 15, 2021</td>
+                    <td>$650,50</td>
+                    <td>
+                        <span class="badge bg-dark">Shipped</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="order-detail.html" class="dropdown-item">詳細資訊</a>
+                                    <a href="#" class="dropdown-item">編輯</a>
+                                    <a href="#" class="dropdown-item">刪除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3212</a>
+                    </td>
+                    <td>Audrye Heaford</td>
+                    <td>Apr 24, 2021</td>
+                    <td>$100,00</td>
+                    <td>
+                        <span class="badge bg-success">Completed</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="order-detail.html" class="dropdown-item">詳細資訊</a>
+                                    <a href="#" class="dropdown-item">編輯</a>
+                                    <a href="#" class="dropdown-item">刪除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3213</a>
+                    </td>
+                    <td>Brantley Mell</td>
+                    <td>Apr 10, 2021</td>
+                    <td>$19</td>
+                    <td>
+                        <span class="badge bg-warning">Refunded</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="order-detail.html" class="dropdown-item">詳細資訊</a>
+                                    <a href="#" class="dropdown-item">編輯</a>
+                                    <a href="#" class="dropdown-item">刪除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3214</a>
+                    </td>
+                    <td>Dominique Enriques</td>
+                    <td>March 5, 2021</td>
+                    <td>$150,00</td>
+                    <td>
+                        <span class="badge bg-danger">Cancelled</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Show</a>
+                                    <a href="#" class="dropdown-item">Edit</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3215</a>
+                    </td>
+                    <td>Cortie Gemson</td>
+                    <td>May 23, 2021</td>
+                    <td>$239,00</td>
+                    <td>
+                        <span class="badge bg-primary">Processing</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Show</a>
+                                    <a href="#" class="dropdown-item">Edit</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3216</a>
+                    </td>
+                    <td>Mathilde Tumilson</td>
+                    <td>May 15, 2021</td>
+                    <td>$650,50</td>
+                    <td>
+                        <span class="badge bg-dark">Shipped</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Show</a>
+                                    <a href="#" class="dropdown-item">Edit</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3217</a>
+                    </td>
+                    <td>Audrye Heaford</td>
+                    <td>Apr 24, 2021</td>
+                    <td>$100,00</td>
+                    <td>
+                        <span class="badge bg-success">Completed</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Show</a>
+                                    <a href="#" class="dropdown-item">Edit</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3218</a>
+                    </td>
+                    <td>Brantley Mell</td>
+                    <td>Apr 10, 2021</td>
+                    <td>$19</td>
+                    <td>
+                        <span class="badge bg-warning">Refunded</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Show</a>
+                                    <a href="#" class="dropdown-item">Edit</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td>
+                        <input class="form-check-input" type="checkbox">
+                    </td> -->
+                    <td>
+                        <a href="#">#3210</a>
+                    </td>
+                    <td>Dominique Enriques</td>
+                    <td>March 5, 2021</td>
+                    <td>$150,00</td>
+                    <td>
+                        <span class="badge bg-danger">Cancelled</span>
+                    </td>
+                    <td class="text-end">
+                        <div class="d-flex">
+                            <div class="dropdown ms-auto">
+                                <a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Show</a>
+                                    <a href="#" class="dropdown-item">Edit</a>
+                                    <a href="#" class="dropdown-item">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <nav class="mt-4" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+</body>
