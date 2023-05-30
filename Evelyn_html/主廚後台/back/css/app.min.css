@@ -211,41 +211,6 @@
     }
 }
 
-body.dark-topbar .navbar-custom,
-body.dark-topbar .topbar {
-    background-color: #0f172a
-}
-
-body.dark-topbar .left-sidebar .brand {
-    background-color: #0f172a;
-    border-right: 1px solid #131d35
-}
-
-body.dark-topbar .left-sidebar .brand .logo .logo-lg {
-    display: none
-}
-
-body.dark-topbar .left-sidebar .brand .logo .logo-lg.logo-light {
-    display: inline-block
-}
-
-body.dark-topbar .navbar-custom .nav-link.nav-icon i {
-    color: #abb4c7
-}
-
-body.dark-topbar .navbar-custom .nav-link.nav-icon {
-    background-color: #343c50
-}
-
-body.dark-topbar .navbar-custom .nav-link {
-    color: #c2cbe2
-}
-
-body.dark-topbar .app-search form .form-control,
-body.dark-topbar .app-search form .form-control:focus {
-    color: #c2cbe2;
-    background: #343c50
-}
 
 .footer {
     bottom: 0;
@@ -1525,16 +1490,7 @@ html {
     min-height: 100%
 }
 
-body {
-    margin: 0;
-    overflow-x: hidden !important;
-    font-size: .875rem;
-    background-color: #f5f8fa;
-    color: #000444;
-    letter-spacing: .1px;
-    line-height: 1.5;
-    position: relative
-}
+
 
 .row>* {
     position: relative
@@ -1605,10 +1561,6 @@ p {
     background-color: #fff
 }
 
-* {
-    outline: 0 !important
-}
-
 mark {
     color: inherit;
     padding: 0;
@@ -1624,9 +1576,6 @@ mark {
     font-weight: 500 !important
 }
 
-.nav.nav-pills {
-    background-color: #fbfbfb
-}
 
 .media {
     display: -webkit-box;
@@ -3559,9 +3508,7 @@ a.badge:hover {
     background-color: #fff
 }
 
-.nav.nav-pills {
-    background-color: #f9fafb
-}
+
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
