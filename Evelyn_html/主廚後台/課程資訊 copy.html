@@ -52,13 +52,10 @@
     </style>
 
     <!-- evely_css -->
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\style.css">
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\evelyn.css">
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\app.min.css">
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\css2.css">
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin-2.css">
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin-3.css">
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn.css">
+    <link rel="stylesheet" type="text/css" href="back\css\app.min.css">
+    <link rel="stylesheet" type="text/css" href="back\css\css2.css">
+    <link rel="stylesheet" type="text/css" href="back\css\icons.min.css">
 
 </head>
 
@@ -302,92 +299,115 @@
                             <div class="col-md-12">
                                 <div class="content-section" id="section1">
                                     <p>Section 1 Content goes here</p>
-
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <table id="example3" class="display" style="min-width: 845px">
-                                                        <thead>
-                                                            <tr>
-                                                                <th></th>
-                                                                <th>課程編號</th>
-                                                                <th>課程名稱</th>
-                                                                <th>上傳時間</th>
-                                                                <th>課程狀態</th>
-                                                                <th>確認</th>
-
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>11111</td>
-                                                                <td><img class="rounded-circle" width="35"
-                                                                        src="images/profile/small/pic1.jpg" alt=""></td>
-                                                                <td>我就爛甜點課程</td>
-                                                                <td>時間放這裡</td>
-                                                                <td><span class="badge badge-success">已上架</span></td>
-                                                                <td><button type="button"
-                                                                        class="btn btn-warning">查看</button></td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>22222</td>
-                                                                <td><img class="rounded-circle" width="35"
-                                                                        src="images/profile/small/pic1.jpg" alt=""></td>
-                                                                <td>你才爛甜點課程</td>
-                                                                <td>時間放這裡</td>
-                                                                <td><span class="badge badge-danger">審核中</span></td>
-                                                                <td><button type="button"
-                                                                        class="btn btn-warning">查看</button></td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>33333</td>
-                                                                <td><img class="rounded-circle" width="35"
-                                                                        src="images/profile/small/pic1.jpg" alt=""></td>
-                                                                <td>我最好吃甜點課程</td>
-                                                                <td>時間放這裡</td>
-                                                                <td><span class="badge badge-success">已上架</span></td>
-                                                                <td><button type="button"
-                                                                        class="btn btn-warning">查看</button></td>
-
-                                                            </tr>
-
-
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col">
+                                        <a href="add-student.html" class="btn btn-outline-light btn-sm px-4 ">+ Add
+                                            New</a>
                                     </div>
 
-                                    <div class="content-section" id="section2">
-                                        <p>Section 2 Content goes here</p>
-                                        <H3>11111</H3>
-                                    </div>
-                                    <div class="content-section" id="section3">
-                                        <p>Section 2 Content goes here</p>
-                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>課程編號</th>
+                                                        <th>課程名稱</th>
+                                                        <th>上傳時間</th>
+                                                        <th>課程狀態</th>
 
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>11111</td>
+                                                        <td><img src="static/picture/user-3.jpg" alt=""
+                                                                class="rounded-circle thumb-sm me-1">我就爛甜點課程</td>
+
+                                                        <td><span class="badge badge-soft-success">已上架</span></td>
+                                                        <td>
+                                                            <a href="#"><i
+                                                                    class="las la-pen text-secondary font-16"></i></a>
+                                                            <a href="#"><i
+                                                                    class="las la-trash-alt text-secondary font-16"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22222</td>
+                                                        <td><img src="static/picture/user-4.jpg" alt=""
+                                                                class="rounded-circle thumb-sm me-1">好玩甜點課程</td>
+
+                                                        <td><span class="badge badge-soft-danger">審核中</span></td>
+                                                        <td>
+                                                            <a href="#"><i
+                                                                    class="las la-pen text-secondary font-16"></i></a>
+                                                            <a href="#"><i
+                                                                    class="las la-trash-alt text-secondary font-16"></i></a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>3333</td>
+                                                        <td><img src="static/picture/user-5.jpg" alt=""
+                                                                class="rounded-circle thumb-sm me-1">你才爛甜點課程</td>
+
+                                                        <td><span class="badge badge-soft-success">已上架</span></td>
+                                                        <td>
+                                                            <a href="#"><i
+                                                                    class="las la-pen text-secondary font-16"></i></a>
+                                                            <a href="#"><i
+                                                                    class="las la-trash-alt text-secondary font-16"></i></a>
+                                                        </td>
+                                                    </tr>
+
+
+
+
+                                                </tbody>
+                                            </table><!--end /table-->
+                                        </div><!--end /tableresponsive-->
+                                        <div class="row">
+                                            <!--end col-->
+                                            <div class="col-auto">
+                                                <nav aria-label="...">
+                                                    <ul class="pagination pagination-sm mb-0">
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                        </li>
+                                                        <li class="page-item active"><a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">2 <span
+                                                                    class="sr-only">(current)</span></a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul><!--end pagination-->
+                                                </nav><!--end nav-->
+                                            </div> <!--end col-->
+                                        </div><!--end row-->
+                                    </div><!--end card-body-->
                                 </div>
+                                <div class="content-section" id="section2">
+                                    <p>Section 2 Content goes here</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
-                <!-- 由此結束 -->
+
+
+
+
+
             </div>
-
-            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
-
+            <!-- 由此結束 -->
         </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+    </div>
     </div>
 
 
@@ -426,26 +446,6 @@
 
 
     </script>
-    <!-- evelyn vendors -->
-    <!--**********************************
-        Scripts
-    ***********************************-->
-    <!-- Required vendors -->
-    <script src="back\js\evelyn\global\global.min.js"></script>
-    <script src="back\js\evelyn\bootstrap-select\dist\js\bootstrap-select.min.js"></script>
-    <script src="back\js\evelyn\custom.min.js"></script>
-    <script src="back\js\evelyn\dlabnav-init.js"></script>
-
-
-    <!-- Datatable -->
-    <script src="back\js\evelyn\datatables\js\jquery.dataTables.min.js"></script>
-    <script src="back\js\evelyn\plugins-init\datatables.init.js"></script>
-
-    <!-- Svganimation scripts -->
-    <script src="back\js\evelyn\svganimation\svg.animation.js"></script>
-    <script src="back\js\evelyn\svganimation\vivus.min.js"></script>
-    <script src="back\js\evelyn\styleSwitcher.js"></script>
-
 
 </body>
 

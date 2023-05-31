@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>back-nav-bar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="back-nav-bar.css">  -->
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        #nav-bar {
+            background-color: #1E1916;
+
+        }
+
+        .nav-pills {
+            --bs-nav-pills-link-active-bg: white;
+        }
+
+        :root {
+            --bs-link-color: white;
+            --bs-link-hover-color: orange;
+
+        }
+
+        /* 標題列 */
+        #mainheader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 80px;
+            background: #f8d3ae;
+            position: static;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+    <!-- evely_css -->
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\style.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\evelyn.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\app.min.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\css2.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin-2.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin-3.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin.css">
+
+</head>
+
+<body>
+
+
+    <section id="mainheader">
+        <span style="font-size: 40px; font-family: serif;">Le Goûter </span>
+        <span style="font-size: 40px; font-family: 'Jost', sans-serif;">&nbsp後台管理系統</span>
+    </section>
+
+
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " id="nav-bar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <!-- Menu
+                        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline mt-3">Menu</span></a> -->
+
+
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+
+                        <!-- 1 -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+
+                        <!-- 2 -->
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">會員管理系統</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">會員權限管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">會員資料管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span class="d-none d-sm-inline">優惠管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 3 -->
+                        <!-- 
+                            <li>
+                                <a href="#" class="nav-link px-0 align-middle">
+                                    <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+                            </li>
+                        -->
+
+                        <!-- 4 -->
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">網站管理系統</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span class="d-none d-sm-inline">即時客服</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span class="d-none d-sm-inline">輪播圖管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">最新消息管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 5 -->
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">團購管理系統</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">團購商品管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">團購參與者訂單管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">團購方案管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">團購活動管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">團購分潤管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 6 -->
+                        <!-- 
+                            <li>
+                                <a href="#" class="nav-link px-0 align-middle">
+                                    <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
+                            </li>
+                        -->
+
+                        <!-- 7 -->
+                        <li>
+                            <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">課程管理系統</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu4" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">課程訂單管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">課程資訊審核管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 8 -->
+                        <li>
+                            <a href="#submenu5" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">主廚管理</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu5" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">主廚資料管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">課程討論區管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">課程資訊管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 9 -->
+                        <li>
+                            <a href="#submenu6" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">甜點管理系統</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu6" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">甜點訂單管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">甜點商品管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">甜點追蹤清單管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- 10 -->
+                        <li>
+                            <a href="#submenu7" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4"></i> <span class="ms-1 d-none d-sm-inline">員工管理系統</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu7" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">員工資料管理</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-4"> <span
+                                            class="d-none d-sm-inline">員工權限管理</span></a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+
+                    <!-- 員工功能小圈圈 -->
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/weichen9715/catpic/blob/main/smudge_lord_60314581_2452933891436033_1050250552612724249_n.jpg?raw=true"
+                                alt="noimg" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">employee</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <!-- <li><a class="dropdown-item" href="#">New project</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li> -->
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+            <div class="col py-3">
+
+                <!-- 由此開始 -->
+
+                <!-- 主要內容 -->
+                <div class="col-10">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="text-center">
+                                    課程資訊管理
+                                </h3>
+
+                                <div class="btngroup btn-grouplg centerbuttons">
+                                    <button type="button" data-section="section1"
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">所有課程</button>
+                                    <button type="button" data-section="section2"
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">課程上傳</button>
+                                    <button type="button" data-section="section3"
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">審核中</button>
+                                    <button type="button" data-section="section4"
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">開課中</button>
+                                    <button type="button" data-section="section5"
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">已退件</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="content-section" id="section1">
+                                    <p>Section 1 Content goes here</p>
+
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table id="example3" class="display" style="min-width: 845px">
+                                                        <thead>
+                                                            <tr>
+                                                                <th></th>
+                                                                <th>Name</th>
+                                                                <th>Department</th>
+                                                                <th>Gender</th>
+                                                                <th>Education</th>
+                                                                <th>Mobile</th>
+                                                                <th>Email</th>
+                                                                <th>Joining Date</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic1.jpg" alt=""></td>
+                                                                <td>Tiger Nixon</td>
+                                                                <td>Architect</td>
+                                                                <td>Male</td>
+                                                                <td>M.COM., P.H.D.</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2011/04/25</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic2.jpg" alt=""></td>
+                                                                <td>Garrett Winters</td>
+                                                                <td>Accountant</td>
+                                                                <td>Female</td>
+                                                                <td>M.COM., P.H.D.</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2011/07/25</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic3.jpg" alt=""></td>
+                                                                <td>Ashton Cox</td>
+                                                                <td>Junior Technical</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2009/01/12</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic4.jpg" alt=""></td>
+                                                                <td>Cedric Kelly</td>
+                                                                <td>Developer</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/03/29</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic5.jpg" alt=""></td>
+                                                                <td>Airi Satou</td>
+                                                                <td>Accountant</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2008/11/28</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic6.jpg" alt=""></td>
+                                                                <td>Brielle Williamson</td>
+                                                                <td>Specialist</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/12/02</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic7.jpg" alt=""></td>
+                                                                <td>Herrod Chandler</td>
+                                                                <td>Sales Assistant</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/08/06</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic8.jpg" alt=""></td>
+                                                                <td>Rhona Davidson</td>
+                                                                <td>Integration</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/10/14</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic9.jpg" alt=""></td>
+                                                                <td>Colleen Hurst</td>
+                                                                <td>Javascript Developer</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2009/09/15</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic10.jpg" alt="">
+                                                                </td>
+                                                                <td>Sonya Frost</td>
+                                                                <td>Software Engineer</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2008/12/13</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic1.jpg" alt=""></td>
+                                                                <td>Jena Gaines</td>
+                                                                <td>Office Manager</td>
+                                                                <td>Female</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2008/12/19</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic2.jpg" alt=""></td>
+                                                                <td>Quinn Flynn</td>
+                                                                <td>Support Lead</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2013/03/03</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic3.jpg" alt=""></td>
+                                                                <td>Charde Marshall</td>
+                                                                <td>Regional Director</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2008/10/16</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic4.jpg" alt=""></td>
+                                                                <td>Haley Kennedy</td>
+                                                                <td>Senior Marketing</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/12/18</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic5.jpg" alt=""></td>
+                                                                <td>Tatyana Fitzpatrick</td>
+                                                                <td>Regional Director</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/03/17</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic6.jpg" alt=""></td>
+                                                                <td>Michael Silva</td>
+                                                                <td>Marketing Designer</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/11/27</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic7.jpg" alt=""></td>
+                                                                <td>Paul Byrd</td>
+                                                                <td>Financial Officer</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/06/09</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic8.jpg" alt=""></td>
+                                                                <td>Gloria Little</td>
+                                                                <td>Systems Administrator</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2009/04/10</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic9.jpg" alt=""></td>
+                                                                <td>Bradley Greer</td>
+                                                                <td>Software Engineer</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/10/13</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic10.jpg" alt="">
+                                                                </td>
+                                                                <td>Dai Rios</td>
+                                                                <td>Personnel Lead</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2012/09/26</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic1.jpg" alt=""></td>
+                                                                <td>Jenette Caldwell</td>
+                                                                <td>Development Lead</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2011/09/03</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic2.jpg" alt=""></td>
+                                                                <td>Yuri Berry</td>
+                                                                <td>Marketing Officer</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2009/06/25</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic3.jpg" alt=""></td>
+                                                                <td>Caesar Vance</td>
+                                                                <td>Pre-Sales Support</td>
+                                                                <td>Male</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2011/12/12</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic4.jpg" alt=""></td>
+                                                                <td>Doris Wilder</td>
+                                                                <td>Sales Assistant</td>
+                                                                <td>Female</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/09/20</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic5.jpg" alt=""></td>
+                                                                <td>Angelica Ramos</td>
+                                                                <td>Executive Officer</td>
+                                                                <td>Male</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2009/10/09</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic6.jpg" alt=""></td>
+                                                                <td>Gavin Joyce</td>
+                                                                <td>Developer</td>
+                                                                <td>Female</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/12/22</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic7.jpg" alt=""></td>
+                                                                <td>Jennifer Chang</td>
+                                                                <td>Regional Director</td>
+                                                                <td>Male</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/11/14</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic8.jpg" alt=""></td>
+                                                                <td>Brenden Wagner</td>
+                                                                <td>Software Engineer</td>
+                                                                <td>Female</td>
+                                                                <td>B.TACH, M.TACH</td>
+                                                                <td><a href="javascript:void(0);"><strong>123 456
+                                                                            7890</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2011/06/07</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic9.jpg" alt=""></td>
+                                                                <td>Fiona Green</td>
+                                                                <td>Operating Officer</td>
+                                                                <td>Male</td>
+                                                                <td>B.A, B.C.A</td>
+                                                                <td><a href="javascript:void(0);"><strong>987 654
+                                                                            3210</strong></a></td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2010/03/11</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img class="rounded-circle" width="35"
+                                                                        src="images/profile/small/pic10.jpg" alt="">
+                                                                </td>
+                                                                <td>Shou Itou</td>
+                                                                <td>Regional Marketing</td>
+                                                                <td>Female</td>
+                                                                <td>B.COM., M.COM.</td>
+                                                                <td><a href="javascript:void(0);"><strong>(123) 4567
+                                                                            890</strong></a>
+                                                                </td>
+                                                                <td><a
+                                                                        href="javascript:void(0);"><strong>info@example.com</strong></a>
+                                                                </td>
+                                                                <td>2011/08/14</td>
+                                                                <td>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-primary"><i
+                                                                            class="la la-pencil"></i></a>
+                                                                    <a href="javascript:void(0);"
+                                                                        class="btn btn-sm btn-danger"><i
+                                                                            class="la la-trash-o"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content-section" id="section2">
+                                        <p>Section 2 Content goes here</p>
+                                        <H3>11111</H3>
+                                    </div>
+                                    <div class="content-section" id="section3">
+                                        <p>Section 2 Content goes here</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <!-- 由此結束 -->
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- import js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- import font awesome -->
+    <script src="https://kit.fontawesome.com/3d215f6a1d.js" crossorigin="anonymous"></script>
+
+    <!-- ebvelyn jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <!-- evelyn jquery -->
+    <script>
+        $(function () {
+
+            $(".ebtn").on("click", function () {
+                console.log("sss")
+                //hide all sections
+                $(".content-section").hide();
+                //show the section depending on which button was clicked
+                $("#" + $(this).attr("data-section")).show();
+            });
+
+        });
+
+
+
+
+    </script>
+    <!-- evelyn vendors -->
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="back\js\evelyn\global\global.min.js"></script>
+    <script src="back\js\evelyn\bootstrap-select\dist\js\bootstrap-select.min.js"></script>
+    <script src="back\js\evelyn\custom.min.js"></script>
+    <script src="back\js\evelyn\dlabnav-init.js"></script>
+
+
+    <!-- Datatable -->
+    <script src="back\js\evelyn\datatables\js\jquery.dataTables.min.js"></script>
+    <script src="back\js\evelyn\plugins-init\datatables.init.js"></script>
+
+    <!-- Svganimation scripts -->
+    <script src="back\js\evelyn\svganimation\svg.animation.js"></script>
+    <script src="back\js\evelyn\svganimation\vivus.min.js"></script>
+    <script src="back\js\evelyn\styleSwitcher.js"></script>
+
+
+</body>
+
+</html>
