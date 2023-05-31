@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -75,7 +76,7 @@ body {
     width: 100%;
 }
 
-#header {
+/* #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,16 +107,16 @@ body {
     font-weight: 600;
     color: #1a1a1a;
     transition: 0.3s ease;
-}
+} */
 
 /* 在該頁面時navbar對應會亮 */
-#navbar li a:hover,
+/* #navbar li a:hover,
 #navbar li a.active {
     color: #782b02;
-}
+} */
 
 /* navbar按鈕底線會亮 */
-#navbar li a.active::after,
+/* #navbar li a.active::after,
 #navbar li a:hover::after {
     content: "";
     width: 30%;
@@ -134,7 +135,7 @@ body {
 #mobile {
     display: none;
     align-items: center;
-}
+} */
 
 #close {
     display: none;
@@ -315,6 +316,7 @@ body {
     background: #ab3c00;
     font-weight: 400;
 }
+
 /* 
 #banner {
     background-image: url("img/banner/b2.jpg");
@@ -491,7 +493,7 @@ body {
     border-bottom-left-radius: 0px;
 } */
 
-footer {
+/* footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -553,7 +555,7 @@ footer .copyright {
 footer .follow i:hover,
 footer a:hover {
     color: #ab3c00;
-}
+} */
 
 
 /* ----------------------------------Shop Page------------------------------------------------- */
@@ -568,11 +570,13 @@ footer a:hover {
     background-size: cover;
     padding: 14px;
 }
+
 /* 橫幅 */
 #page-header h2,
 #page-header p {
     color: #fff;
 }
+
 /* 換頁按鈕 */
 #pagination {
     text-align: center;
@@ -597,7 +601,7 @@ footer a:hover {
 
 #prodetails {
     display: flex;
-    margin-top: 20px;
+    margin-top: 150px;
 }
 
 #prodetails .single-pro-image {
@@ -608,11 +612,13 @@ footer a:hover {
 .small-img-group {
     display: flex;
     justify-content: space-between;
+    padding-top: 10px
 }
 
 .small-img-col {
     flex-basis: 24%;
     cursor: pointer;
+
 }
 
 #prodetails .single-pro-details {
@@ -1006,6 +1012,7 @@ footer a:hover {
     .section-p1 {
         padding: 40px;
     }
+
     #navbar {
         display: flex;
         flex-direction: column;
@@ -1021,23 +1028,29 @@ footer a:hover {
         transition: 0.3s;
         padding: 80px 0 0 10px;
     }
+
     #navbar li {
         margin-bottom: 25px;
     }
+
     #navbar.active {
         right: 0;
     }
+
     #mobile {
         display: flex;
     }
+
     #mobile i {
         color: #1a1a1a;
         font-size: 24px;
         padding-left: 20px;
     }
+
     #bar {
         display: initial;
     }
+
     #close {
         display: initial;
         font-size: 24px;
@@ -1046,47 +1059,59 @@ footer a:hover {
         left: 30px;
         color: #222;
     }
+
     #lg-bag,
     #lg-search {
         display: none;
     }
+
     #hero {
         padding: 0 80px;
         height: 70vh;
         background-position: top 30% right 30%;
     }
+
     #feature {
         justify-content: center;
     }
+
     #feature .fe-box {
         margin: 15px;
     }
+
     #product1 .pro-container {
         justify-content: center;
     }
+
     #product1 .pro {
         margin: 15px;
     }
+
     #banner {
         height: 20vh;
     }
+
     #sm-banner .banner-box {
         min-width: 100%;
         height: 30vh;
         padding: 30px;
     }
+
     #banner3 {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 0 40px;
     }
+
     #banner3 .banner-box {
         width: 28%;
     }
+
     #newsletter .form {
         width: 70%;
     }
+
     /* Contact Page */
     /* #form-details {
         padding: 40px;
@@ -1100,51 +1125,66 @@ footer a:hover {
     .section-p1 {
         padding: 20px;
     }
+
     h1 {
         font-size: 38px;
     }
+
     h2 {
         font-size: 32px;
     }
+
     #header {
         padding: 10px 30px;
     }
+
     #hero {
         padding: 0 20px;
         height: 70vh;
         background-position: 55%;
     }
+
     #feature {
         justify-content: space-between;
     }
+
     #feature .fe-box {
         width: 155px;
         margin: 0 0 15px 0;
     }
+
     #product1 .pro {
         width: 100%;
     }
+
     #banner {
         height: 40vh;
     }
+
     #sm-banner .banner-box {
         height: 40vh;
     }
+
     #sm-banner .banner-box {
         margin-top: 20px;
     }
+
     #banner3 {
         padding: 0 20px;
     }
+
     #banner3 .banner-box {
         width: 100%;
     }
+
     #newsletter {
         padding: 40px 20px;
     }
+
     #newsletter .form {
         width: 100%;
     }
+
     footer .copyright {
         text-align: start;
     }
@@ -1208,21 +1248,26 @@ footer a:hover {
     #cart-add {
         flex-direction: column;
     }
+
     #cuopon,
     #subtotal {
         width: 100%;
     }
+
     #subtotal {
         padding: 20px;
     }
+
     /* SIngle Product */
     #prodetails {
         flex-direction: column;
     }
+
     #prodetails .single-pro-image {
         width: 100%;
         margin-right: 0px;
     }
+
     #prodetails .single-pro-details {
         width: 100%;
         padding-top: 30px;
@@ -1256,5 +1301,5 @@ footer a:hover {
     background: transparent;
     cursor: pointer;
 
-    
+
 }
