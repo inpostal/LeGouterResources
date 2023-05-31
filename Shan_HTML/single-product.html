@@ -31,6 +31,28 @@
         .tototo {
             height: 200px;
         }
+
+        progress {
+            width: 400px;
+            position: relative;
+            -webkit-appearance: none;
+            border-radius: 5px;
+            /* 圓角 */
+            overflow: hidden;
+            /* 超過範圍就裁切 */
+            height: 14px;
+            /* 高度 */
+        }
+
+        ::-webkit-progress-value {
+            background-color: rgb(0, 110, 255);
+        }
+
+
+
+        ::-webkit-progress-bar {
+            background-color: rgb(216, 231, 241);
+        }
     </style>
 </head>
 
@@ -208,13 +230,13 @@
                     <!-- 單品圖片顯示結束 -->
                     <div class="col-xxl-6 col-lg-6">
                         <div class="epix-single-product-right">
-                            <div class="rating">
+                            <!-- <div class="rating">
                                 <i class="fas fa-star active"></i>
                                 <i class="fas fa-star active"></i>
                                 <i class="fas fa-star active"></i>
                                 <i class="fas fa-star-half"></i>
                                 <i class="fas fa-star text-gray"></i>
-                            </div>
+                            </div> -->
                             <h4 class="epix-single-product-title">團購活動1<br>天天肉桂捲日</h4>
                             <p class="epix-product-details-short-description">
                                 開始日期:<br>
@@ -257,6 +279,12 @@
                                         <a href="cart.html" class="cart-btn mr-15">加入購物車</a>
                                     </div> -->
                                     <!-- 在結帳的頁面選擇數量 -->
+                                    <span>倒數計時:</span>
+                                    <p id="demo"></p>
+                                    <p>
+                                        <span>揪團進度：</span>
+                                        <progress value="123" max="300"></progress>
+                                    </p>
                                     <a href="checkout.html"
                                         class="buy-btn d-block d-sm-inline-block text-center text-sm-left">參加團購</a>
                                 </div>
@@ -771,6 +799,37 @@
 
     <script src="static/js/main.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
     <script src="static/js/rocket-loader.min.js" data-cf-settings="0080e6b992b21508d4c0eeae-|49" defer=""></script>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 1, 2023 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>

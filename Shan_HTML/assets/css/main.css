@@ -53,13 +53,14 @@ CSS INDEX
 *************************************************************** */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600;700;800;900&display=swap");
 
-body {
+/* 這裡會影響全部的字型、大小 */
+/* body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var(-clr-body-text);
-  /* font-size: 15px; */
-}
+  font-size: 15px; 
+} */
 
 .img,
 img {
@@ -173,22 +174,22 @@ h6 {
   font-size: 16px;
 } */
 
-ul {
+/* ul {
   margin: 0px;
   padding: 0px;
 }
 
 li {
   list-style: none;
-}
+} */
 
-p {
+/* p {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.86;
   color: var(--clr-body-text);
   margin-bottom: 15px;
-}
+} */
 
 hr {
   border-bottom: 1px solid var(--clr-common-black);
@@ -224,7 +225,7 @@ label {
 }
 
 /* <<<<<<<    Input Placeholder   >>>>>>>>> */
-input::-webkit-input-placeholder {
+/* input::-webkit-input-placeholder {
   color: var(--clr-common-black);
   font-size: 14px;
   opacity: 1;
@@ -246,7 +247,7 @@ input:-ms-input-placeholder {
   color: var(--clr-common-black);
   font-size: 14px;
   opacity: 1;
-}
+} */
 
 /* <<<<<<<    Common Classes   >>>>>>>>> */
 .fix {
@@ -3705,7 +3706,7 @@ a.header-cart-3 a {
   font-size: 18px;
 }
 
-.epix-breadcrumb ul li span,
+/* .epix-breadcrumb ul li span,
 .epix-breadcrumb ul li a {
   font-size: 14px;
 }
@@ -3732,7 +3733,7 @@ a.header-cart-3 a {
   font-size: 25px;
   line-height: 1;
   margin-bottom: 10px;
-}
+} */
 
 .epix-side-dropdown {
   position: relative;
