@@ -13,6 +13,25 @@
 
     <!-- CSS
 	============================================ -->
+    <style>
+        .form-row {
+            display: flex;
+            align-items: center;
+        }
+    
+        .form-row .remember-login {
+            margin-left: 60px;
+        }
+        #showlogin {
+        color: #007BFF;
+        transition: color 0.01s;
+    }
+
+    #showlogin:active {
+        color:  #EA6636 ;
+    }
+    </style>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <!-- FontAwesome -->
@@ -54,7 +73,7 @@
 
     <style>
         .payment-option.active {
-            color: red;
+            color: #EA6636;
             /* 设置选中付款方式后的字体颜色 */
         }
     </style>
@@ -164,11 +183,11 @@
         <div class="container container-default-2 custom-container">
             <div class="row">
                 <div class="col-12">
+                    
                     <div class="coupon-accordion">
                         <h3>已經是會員? <span id="showlogin">點擊此處登入</span></h3>
                         <div id="checkout-login" class="coupon-content">
                             <div class="coupon-info">
-
                                 <form action="#">
                                     <p class="form-row-first">
                                         <label>會員帳號 <span class="required">*</span></label>
@@ -181,13 +200,14 @@
                                     <p class="form-row">
                                         <input type="checkbox" id="remember_me">
                                         <label for="remember_me">記住登入資訊</label>
+                                        <span class="remember-login"><input type="submit" value="登入"></span>
                                     </p>
                                     <p class="lost-password"><a href="#">忘記密碼?</a></p>
                                 </form>
                             </div>
                         </div>
-
                     </div>
+ 
                 </div>
             </div>
             <div class="row">
