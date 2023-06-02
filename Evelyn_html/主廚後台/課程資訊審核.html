@@ -279,20 +279,16 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h3 class="text-center">
-                                課程資訊管理
+                                課程資訊審核管理
                             </h3>
                             <div>
                                 <div class="btngroup btn-grouplg centerbuttons">
                                     <button type="button" data-section="section1"
-                                        class="ebtn btnprimary segmentedButton btngroup--btn">所有課程</button>
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">審核清單</button>
                                     <button type="button" data-section="section2"
-                                        class="ebtn btnprimary segmentedButton btngroup--btn">課程上傳</button>
-                                    <button type="button" data-section="section3"
                                         class="ebtn btnprimary segmentedButton btngroup--btn">審核中</button>
-                                    <button type="button" data-section="section4"
-                                        class="ebtn btnprimary segmentedButton btngroup--btn">開課中</button>
-                                    <button type="button" data-section="section5"
-                                        class="ebtn btnprimary segmentedButton btngroup--btn">已退件</button>
+                                    <button type="button" data-section="section3"
+                                        class="ebtn btnprimary segmentedButton btngroup--btn">審核完成</button>
                                 </div>
                             </div>
                         </div>
@@ -309,13 +305,11 @@
                                                 <table id="example3" class="display" style="min-width: 100%">
                                                     <thead>
                                                         <tr>
-                                                            <a href="add-library.html" class="btn btn-primary">+ 新增</a>
-
                                                             <th>課程編號</th>
                                                             <th>課程名稱</th>
-                                                            <th>上傳時間</th>
-                                                            <th>課程狀態</th>
-                                                            <th>確認</th>
+                                                            <th>更新時間</th>
+                                                            <th>審核狀態</th>
+                                                            <th>內容</th>
 
                                                         </tr>
                                                     </thead>
@@ -326,7 +320,7 @@
                                                                     src="img\evelyn-img\i_suck.jpg" alt="">我就爛甜點課程
                                                             </td>
                                                             <td>時間放這裡</td>
-                                                            <td><span class="badge badge-success">已上架</span></td>
+                                                            <td><span class="badge badge-success">審核完成</span></td>
                                                             <td><button type="button"
                                                                     class="btn btn-warning">查看</button></td>
 
@@ -338,7 +332,7 @@
                                                                     alt="">我就爛甜點課程
                                                             </td>
                                                             <td>時間放這裡</td>
-                                                            <td><span class="badge badge-danger">審核中</span></td>
+                                                            <td><span class="badge badge-danger">待審核</span></td>
                                                             <td><button type="button"
                                                                     class="btn btn-warning">查看</button></td>
 
@@ -350,189 +344,22 @@
                                                                     alt="">我最好吃甜點課程
                                                             </td>
                                                             <td>時間放這裡</td>
-                                                            <td><span class="badge badge-success">已上架</span></td>
+                                                            <td><span class="badge badge-success">審核完成</span></td>
                                                             <td><button type="button"
                                                                     class="btn btn-warning">查看</button></td>
 
                                                         </tr>
-
-
-
-
                                                     </tbody>
                                                 </table>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-
-
-                            <div class="content-section" id="section2">
-                                <p>Section 2 Content goes here</p>
-                                <div class="col-xl-6 col-xxl-6 col-lg-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="card-title">課程內容</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="basic-form">
-                                                <form>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">課程名稱</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control input-default "
-                                                                placeholder="課程名稱">
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">課程售價</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control input-default "
-                                                                placeholder="課程售價">
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">課程介紹</label>
-                                                        <form>
-                                                            <div class="col-sm-10">
-                                                                <textarea class="form-control" rows="4"
-                                                                    id="comment"></textarea>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="basic-form">
-                                                        <form>
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">學習要點1</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text"
-                                                                        class="form-control input-default "
-                                                                        placeholder="選填">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">學習要點2</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text"
-                                                                        class="form-control input-default "
-                                                                        placeholder="選填">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">學習要點3</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text"
-                                                                        class="form-control input-default "
-                                                                        placeholder="選填">
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">學習要點4</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text"
-                                                                        class="form-control input-default "
-                                                                        placeholder="選填">
-
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                        <form>
-                                                            <div class="form-group row">
-                                                                <label
-                                                                    class="col-sm-2 col-form-label">內容補充<br>如：誰適合這門課?</label>
-                                                                <form>
-                                                                    <div class="col-sm-10 ">
-                                                                        <textarea class="form-control" rows="4"
-                                                                            id="comment"></textarea>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </form>
-                                                <div class="card-header">
-                                                    <h4 class="card-title">檔案上傳</h4>
-                                                </div>
-                                                <form>
-                                                    <div class="card-body">
-
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">課程圖片</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="file" class="dropify" data-default-file="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">課程影片<br>(試看)</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="file" class="dropify" data-default-file="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">課程影片<br>(1-1)</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="file" class="dropify" data-default-file="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">課程影片<br>(1-2)</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="file" class="dropify" data-default-file="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">課程影片<br>(1-3)</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="file" class="dropify" data-default-file="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group row">
-                                                            <label class="col-sm-2 col-form-label">課程影片<br>(2-1)</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="file" class="dropify" data-default-file="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <form action="#" method="post">
-                                                            <div class="row">
-                                                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                                                    <button type="submit"
-                                                                        class="btn btn-primary">送出</button>
-                                                                    <button type="submit"
-                                                                        class="btn btn-light">取消</button>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
                     </div>
-                    <div class="content-section" id="section3">
-                        <p>Section 3 Content goes here</p>
+                    <div class="content-section" id="section2">
+                        <p>Section 2 Content goes here</p>
 
                         <div class="col-xl-6 col-xxl-6 col-lg-6">
                             <div class="card">
@@ -694,11 +521,56 @@
 
                     </div>
 
-                    <div class="content-section" id="section4">
-                        <p>Section 4 Content goes here</p>
+                    <div class="content-section" id="section3">
+                        <p>Section 3 Content goes here</p>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="example3" class="display" style="min-width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>課程編號</th>
+                                                    <th>課程名稱</th>
+                                                    <th>更新時間</th>
+                                                    <th>內容</th>
 
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>11111</td>
+                                                    <td><img class="rounded-circle" width="80"
+                                                            src="img\evelyn-img\i_suck.jpg" alt="">我就爛甜點課程
+                                                    </td>
+                                                    <td>時間放這裡</td>
+                                                    <td><button type="button" class="btn btn-warning">查看</button></td>
 
+                                                </tr>
+                                                <tr>
+                                                    <td>22222</td>
+                                                    <td><img class="rounded" width="80"
+                                                            src="img\evelyn-img\everyonesucks.jpg" alt="">我就爛甜點課程
+                                                    </td>
+                                                    <td>時間放這裡</td>
+                                                    <td><button type="button" class="btn btn-warning">查看</button></td>
 
+                                                </tr>
+                                                <tr>
+                                                    <td>33333</td>
+                                                    <td><img class="rounded" width="80"
+                                                            src="img\evelyn-img\givemesomejava.jpg" alt="">我最好吃甜點課程
+                                                    </td>
+                                                    <td>時間放這裡</td>
+                                                    <td><button type="button" class="btn btn-warning">查看</button></td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -707,14 +579,6 @@
 
 
 
-
-
-                    <div class="content-section" id="section5">
-                        <p>Section 5 Content goes here</p>
-
-
-
-                    </div>
                 </div>
             </div>
 

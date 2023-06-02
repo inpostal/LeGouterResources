@@ -1668,7 +1668,7 @@ pre code {
 
   .col-lg-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
 
   .col-lg-7 {
@@ -1880,7 +1880,7 @@ pre code {
 
   .col-xl-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
 
   .col-xl-7 {
@@ -2520,7 +2520,7 @@ pre code {
 
 @media (max-width: 575.98px) {
   .table-responsive-sm {
-    display: block;
+    display: contents;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -12311,7 +12311,7 @@ a.active {
 
   .col-xxl-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 100%;
   }
 
   .col-xxl-7 {
@@ -37510,6 +37510,10 @@ table.dataTable tfoot th {
   border-radius: 5px;
 }
 
+.dataTables_filter {
+  text-align: right;
+}
+
 [data-theme-version="dark"] .dataTables_wrapper input[type="search"],
 [data-theme-version="dark"] .dataTables_wrapper input[type="text"],
 [data-theme-version="dark"] .dataTables_wrapper select {
@@ -37520,6 +37524,7 @@ table.dataTable tfoot th {
 
 .dataTables_wrapper .dataTables_length {
   margin-bottom: 15px;
+  text-align: right;
 }
 
 .dataTables_wrapper .dataTables_length .bootstrap-select {
