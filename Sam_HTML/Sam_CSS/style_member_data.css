@@ -153,30 +153,6 @@ footer {
     align-items: center;
 }
 
-#member-data-section {
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-#member-info {
-    border: 1px var(--dark);
-}
-
-
-
-.member-info-item {
-    margin-top: 20px;
-}
-
-.member-info-item label {
-    font-size: larger;
-    font-weight: bolder;
-}
-
-.member-info-item span {
-    font-size: large;
-}
-
 #update {
     background-color: var(--secondary);
     color: white;
@@ -185,19 +161,33 @@ footer {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 #update:hover {
     background-color: var(--primary);
 }
 
-.hidden-input {
-    display: none;
-}
-.on {
-    display: block;
-}
+#member-data-table {
+    width: 50%;
+    border-collapse: collapse;
+    border: var(--secondary) 1px solid;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+  tr, th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid var(--secondary);
+  }
+  
+  th {
+    background-color: var(--dark);
+    color: var(--primary);
+  }
+  
+  tr:nth-child(even) {
+    background-color: #efdcc7;
+  }
 
-.-on {
-    display: none;
-}
