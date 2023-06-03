@@ -70,7 +70,6 @@ aside {
 
 #login-section-inner-o {
     display: flex;
-    height: 60%;
 }
 
 #member-login-p {
@@ -206,4 +205,5 @@ hr {
 
 #social-div{
     margin-top: 40px;
+    margin-bottom: 40px;
 }
