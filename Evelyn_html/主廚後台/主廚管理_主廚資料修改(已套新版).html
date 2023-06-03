@@ -49,13 +49,28 @@
             align-items: center;
             justify-content: center;
         }
-    </style>
 
+        .nav-link {
+            font-size: 20px;
+        }
+
+        .dropdown {
+            font-size: 20px;
+        }
+
+        .dropdown-item {
+            font-size: 20px;
+        }
+
+        .dropdown-toggle::after {
+            color: #1E1916;
+        }
+    </style>
     <!-- evely_css -->
-    <link rel="stylesheet" type="text/css" href="back\css\evelyn.css">
-    <link rel="stylesheet" type="text/css" href="back\css\app.min.css">
-    <link rel="stylesheet" type="text/css" href="back\css\css2.css">
-    <link rel="stylesheet" type="text/css" href="back\css\icons.min.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\style.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\evelyn.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\css2.css">
+    <link rel="stylesheet" type="text/css" href="back\css\evelyn\skin.css">
 
 </head>
 
@@ -65,6 +80,28 @@
     <section id="mainheader">
         <span style="font-size: 40px; font-family: serif;">Le Goûter </span>
         <span style="font-size: 40px; font-family: 'Jost', sans-serif;">&nbsp後台管理系統</span>
+
+        <!-- 員工功能小圈圈 -->
+
+        <div class="dropdown" style="position: absolute; right: 30px;">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/weichen9715/catpic/blob/main/smudge_lord_60314581_2452933891436033_1050250552612724249_n.jpg?raw=true"
+                    alt="noimg" width="30" height="30" class="rounded-circle">
+                <span class="d-none d-sm-inline mx-1" style="color: #1E1916;">employee</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                <!-- <li><a class="dropdown-item" href="#">New project</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li> -->
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+
+
     </section>
 
 
@@ -217,10 +254,6 @@
                                     <a href="#" class="nav-link px-4"> <span
                                             class="d-none d-sm-inline">甜點商品管理</span></a>
                                 </li>
-                                <li>
-                                    <a href="#" class="nav-link px-4"> <span
-                                            class="d-none d-sm-inline">甜點追蹤清單管理</span></a>
-                                </li>
                             </ul>
                         </li>
 
@@ -244,24 +277,7 @@
                     </ul>
 
                     <!-- 員工功能小圈圈 -->
-                    <hr>
-                    <div class="dropdown pb-4">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/weichen9715/catpic/blob/main/smudge_lord_60314581_2452933891436033_1050250552612724249_n.jpg?raw=true"
-                                alt="noimg" width="30" height="30" class="rounded-circle">
-                            <span class="d-none d-sm-inline mx-1">employee</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <!-- <li><a class="dropdown-item" href="#">New project</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li> -->
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
 
@@ -269,166 +285,111 @@
 
             <div class="col py-3">
 
-                <!-- 由此開始 -->
-
                 <!--**********************************
             Content body start
         ***********************************-->
-                <div class="content-body">
-                    <!-- row -->
-                    <div class="container-fluid">
+                <!-- row -->
+                <div class="container-fluid">
 
-                        <div class="row page-titles mx-0">
-                            <div class="col-sm-6 p-md-0">
-                                <div class="welcome-text">
-                                    <h4>主廚資訊</h4>
-                                </div>
-                            </div>
-
+                    <div class="row page-titles mx-0">
+                        <div class="welcome-text">
+                            <h4>編輯主廚資料</h4>
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-xl-3 col-xxl-4 col-lg-4">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="card">
-                                            <div class="text-center p-3 overlay-box"
-                                                style="background-image: url(images/big/img1.jpg);">
-                                                <div class="profile-photo">
-                                                    <img src="images/profile/profile.png" width="100"
-                                                        class="img-fluid rounded-circle" alt="">
+                    <div class="row">
+                        <div class="col-xl-12 col-xxl-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">姓名</label>
+                                                    <input type="text" class="form-control" value="Harry">
                                                 </div>
-                                                <h3 class="mt-3 mb-1 text-white">Deangelo Sena</h3>
-                                                <p class="text-white mb-0">Senior Manager</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h2 class="card-title">關於我</h2>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">暱稱</label>
+                                                    <input type="text" class="form-control" value="Parker">
+                                                </div>
                                             </div>
-                                            <div class="card-body pb-0">
-
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item d-flex px-0 justify-content-between">
-                                                        <strong>暱稱</strong>
-                                                        <span class="mb-0">Male</span>
-                                                    </li>
-                                                    <li class="list-group-item d-flex px-0 justify-content-between">
-                                                        <strong>性別</strong>
-                                                        <span class="mb-0">PHD</span>
-                                                    </li>
-                                                    <li class="list-group-item d-flex px-0 justify-content-between">
-                                                        <strong>已上傳課程數</strong>
-                                                        <span class="mb-0">120</span>
-                                                    </li>
-                                                </ul>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Email</label>
+                                                    <input type="text" class="form-control" value="info@example.com">
+                                                </div>
                                             </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">電話</label>
+                                                    <input type="text" class="form-control" value="+91 123 456 7890">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">性別</label>
+                                                    <select class="form-control">
+                                                        <option value="Gender">性別</option>
+                                                        <option value="Male" selected="">男</option>
+                                                        <option value="Female">女</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">生日</label>
+                                                    <input name="datepicker" class="datepicker-default form-control"
+                                                        id="datepicker1" value="20 August 2020">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">地址</label>
+                                                    <input type="text" class="form-control" value="address">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="#">
+                                                    <h4 class="#">照片上傳</h4>
+                                                </div>
+                                                <div class="input-group mb-3">
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-9 col-xxl-8 col-lg-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="profile-tab">
-                                            <div class="custom-tab-1">
-                                                <ul class="nav nav-tabs">
-                                                    <li class="nav-item"><a href="#about-me" data-toggle="tab"
-                                                            class="nav-link active show">自我介紹</a></li>
-
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div id="about-me" class="tab-pane fade active show">
-                                                        <div class="profile-about-me">
-                                                            <div class="pt-4 border-bottom-1 pb-4">
-                                                                <p>A wonderful serenity has taken possession of my
-                                                                    entire soul, like these sweet mornings of spring
-                                                                    which I enjoy with my whole heart. I am alone, and
-                                                                    feel the charm of existence was created for the
-                                                                    bliss of souls like mine.I am so happy, my dear
-                                                                    friend, so absorbed in the exquisite sense of mere
-                                                                    tranquil existence, that I neglect my talents.</p>
-                                                                <p>A collection of textile samples lay spread out on the
-                                                                    table - Samsa was a travelling salesman - and above
-                                                                    it there hung a picture that he had recently cut out
-                                                                    of an illustrated magazine and housed in a nice,
-                                                                    gilded frame.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="profile-lang pt-5 border-bottom-1 pb-5">
-                                                            <h4 class="text-primary mb-4">證照</h4><a
-                                                                href="javascript:void()"
-                                                                class="text-muted pr-3 f-s-16"><i
-                                                                    class="flag-icon flag-icon-us"></i> AAA</a> <a
-                                                                href="javascript:void()"
-                                                                class="text-muted pr-3 f-s-16"><i
-                                                                    class="flag-icon flag-icon-fr"></i> BBB</a>
-                                                            <a href="javascript:void()"
-                                                                class="text-muted pr-3 f-s-16"><i
-                                                                    class="flag-icon flag-icon-bd"></i> CCC</a>
-                                                        </div>
-                                                        <div class="profile-personal-info">
-                                                            <h4 class="text-primary mb-4">個人資訊</h4>
-                                                            <div class="row mb-4">
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                                    <h5 class="f-w-500">姓名 <span
-                                                                            class="pull-right">:</span>
-                                                                    </h5>
-                                                                </div>
-                                                                <div class="col-lg-9 col-md-8 col-sm-6 col-6">
-                                                                    <span>Mitchell C.Shay</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mb-4">
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                                    <h5 class="f-w-500">Email <span
-                                                                            class="pull-right">:</span>
-                                                                    </h5>
-                                                                </div>
-                                                                <div class="col-lg-9 col-md-8 col-sm-6 col-6">
-                                                                    <span>info@example.com</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mb-4">
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                                    <h5 class="f-w-500">年齡 <span
-                                                                            class="pull-right">:</span>
-                                                                    </h5>
-                                                                </div>
-                                                                <div class="col-lg-9 col-md-8 col-sm-6 col-6">
-                                                                    <span>27</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mb-4">
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                                                    <h5 class="f-w-500">工作經歷 <span
-                                                                            class="pull-right">:</span></h5>
-                                                                </div>
-                                                                <div class="col-lg-9 col-md-8 col-sm-6 col-6"><span>07
-                                                                        Year Experiences</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div class="custom-file d-flex flex-column align-items-center">
+                                                        <input type="file" class="custom-file-input">
+                                                        <label class="custom-file-label"></label>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">上傳</span>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                <div class="basic-form">
+                                                    <form>
+                                                        <div class="form-group">證照
+                                                            <textarea class="form-control" rows="4"
+                                                                id="comment"></textarea>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <button type="submit" class="btn btn-primary">修改</button>
+                                                <button type="submit" class="btn btn-light">取消</button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <!--**********************************
-            Content body end
-        ***********************************-->
-
-
+                Content body end
+                ***********************************-->
                 <!-- 由此結束 -->
             </div>
 
@@ -452,10 +413,9 @@
     <!-- import font awesome -->
     <script src="https://kit.fontawesome.com/3d215f6a1d.js" crossorigin="anonymous"></script>
 
-    <!-- ebvelyn jquery -->
+    <!-- evelyn jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
         integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
-    <!-- evelyn jquery -->
     <script>
         $(function () {
 
@@ -468,10 +428,6 @@
             });
 
         });
-
-
-
-
     </script>
 
 </body>

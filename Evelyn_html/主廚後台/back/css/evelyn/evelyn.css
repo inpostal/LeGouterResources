@@ -70,3 +70,7 @@ body {
 div#example3_wrapper {
     overflow: hidden;
 }
+
+h3.mt-3.mb-e {
+    margin-bottom: 0 !important;
+}

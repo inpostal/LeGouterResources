@@ -9305,6 +9305,7 @@ button.bg-dark:focus {
 .pb-3,
 .py-3 {
   padding-bottom: 1rem !important;
+  font-size: 1.15rem;
 }
 
 .pl-3,
@@ -16146,6 +16147,13 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 
 .content-body {
   margin-left: 17.1875rem;
+  z-index: 0;
+  transition: all .2s ease;
+}
+
+.content-body.e {
+  margin-left: 2rem;
+  margin-right: 2rem;
   z-index: 0;
   transition: all .2s ease;
 }
@@ -34737,7 +34745,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .page-titles {
   padding: 0.9375rem 1.25rem;
-  background: #fff;
+  background: #ffffff;
   margin-bottom: 30px;
   border-radius: 5px;
 }
@@ -34761,8 +34769,8 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .page-titles h4 {
   margin-bottom: 0;
   margin-top: 0;
-  color: #7356f1;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .page-titles h4 span {
