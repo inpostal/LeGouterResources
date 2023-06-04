@@ -307,10 +307,12 @@
                                     <form class="mb-3 mb-md-0">
                                         <div class="row g-3">
                                             <div class="col-md-3">
-                                                <select class="form-select">
-                                                    <option>Sort by</option>
-                                                    <option value="desc">Desc</option>
-                                                    <option value="asc">Asc</option>
+                                                <select class="form-select" onchange="filterOrdersByStatus(this.value)">
+                                                    <option>訂單狀態</option>
+                                                    <option value="訂單處理中">訂單處理中</option>
+                                                    <option value="運送中">運送中</option>
+                                                    <option value="取消訂單">取消訂單</option>
+                                                    <option value="訂單完成">訂單完成</option>
                                                 </select>
                                             </div>
                                             <div class="col-md-3">
@@ -372,11 +374,11 @@
                                     <td>May 23, 2021</td>
                                     <td>$239,00</td>
                                     <td>
-                                        <span class="badge bg-primary">Processing</span>
+                                        <span class="badge bg-primary">訂單處理中</span>
                                     </td>
 
                                     <td>
-                                        <a href="order-detail.html" title="編輯訂單資訊">
+                                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                                         </a>
                                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -400,10 +402,10 @@
                     <td>May 15, 2021</td>
                     <td>$650,50</td>
                     <td>
-                        <span class="badge bg-dark">Shipped</span>
+                        <span class="badge bg-dark">運送中</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -424,10 +426,10 @@
                     <td>Apr 24, 2021</td>
                     <td>$100,00</td>
                     <td>
-                        <span class="badge bg-success">Completed</span>
+                        <span class="badge bg-success">訂單完成</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -448,10 +450,10 @@
                     <td>Apr 10, 2021</td>
                     <td>$19</td>
                     <td>
-                        <span class="badge bg-warning">Refunded</span>
+                        <span class="badge bg-success">訂單完成</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -472,10 +474,10 @@
                     <td>March 5, 2021</td>
                     <td>$150,00</td>
                     <td>
-                        <span class="badge bg-danger">Cancelled</span>
+                        <span class="badge bg-danger">取消訂單</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -496,10 +498,10 @@
                     <td>May 23, 2021</td>
                     <td>$239,00</td>
                     <td>
-                        <span class="badge bg-primary">Processing</span>
+                        <span class="badge bg-primary">訂單處理中</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -520,10 +522,10 @@
                     <td>May 15, 2021</td>
                     <td>$650,50</td>
                     <td>
-                        <span class="badge bg-dark">Shipped</span>
+                        <span class="badge bg-dark">運送中</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -544,10 +546,10 @@
                     <td>Apr 24, 2021</td>
                     <td>$100,00</td>
                     <td>
-                        <span class="badge bg-success">Completed</span>
+                        <span class="badge bg-success">訂單完成</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -568,10 +570,10 @@
                     <td>Apr 10, 2021</td>
                     <td>$19</td>
                     <td>
-                        <span class="badge bg-warning">Refunded</span>
+                        <span class="badge bg-danger">取消訂單</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -592,10 +594,10 @@
                     <td>March 5, 2021</td>
                     <td>$150,00</td>
                     <td>
-                        <span class="badge bg-danger">Cancelled</span>
+                        <span class="badge bg-danger">取消訂單</span>
                     </td>
                     <td>
-                        <a href="order-detail.html" title="編輯訂單資訊">
+                        <a href="甜點訂單修改.html" title="編輯訂單資訊">
                             <i class="fas fa-edit fa-lg" style="color: #f8d3ae;"></i>
                         </a>
                         <a href="order-detail.html" title="詳細訂單資訊">
@@ -643,6 +645,23 @@
 
 
     <!-- import js -->
+    <script>
+       function filterOrdersByStatus(status) {
+    var table = document.getElementById("orders");
+    var rows = table.getElementsByTagName("tr");
+    
+    for (var i = 1; i < rows.length; i++) { // 從索引1開始，略過表頭行
+        var orderStatus = rows[i].querySelector("td:nth-child(5) span").innerText;
+
+        if (status === "訂單狀態" || status === orderStatus) {
+            rows[i].style.display = ""; // 顯示符合條件的訂單資料
+        } else {
+            rows[i].style.display = "none"; // 隱藏不符合條件的訂單資料
+        }
+    }
+}
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
