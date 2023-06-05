@@ -515,7 +515,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"> <span>新增商品</span></a>
-                                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"> <span>刪除</span></a>
+                                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"> <span>下架</span></a>
                                         <form>
                                             <input type="search" placeholder="搜尋商品名稱" style="border: none; padding: 0; margin-top: 5px; margin-left: 230px;">
                                         </form>						
@@ -535,7 +535,7 @@
                                         <th>商品名稱</th>
                                         <th>商品描述</th>
                                         <th>價格</th>
-                                        <th>數量</th>
+                                        <th>上架狀態</th>
                                         <th></th>
 
                                     </tr>
@@ -552,10 +552,10 @@
                                         <td>馬卡龍</td>
                                         <td>我們店內的馬卡龍是絕對不能錯過的甜點之一！這些小巧的甜點外脆內軟，口感絕佳。我們提供各種口味的馬卡龍，每一顆都令人垂涎欲滴。</td>
                                         <td>$39.00</td>
-                                        <td>10</td>
+                                        <td>已上架</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><span data-toggle="tooltip" title="Edit">編輯</span></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">刪除</span></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">下架</span></a>
                                             <a href="#pictureUploadModal" data-toggle="modal"><span data-toggle="tooltip" title="Delete">上傳圖片</span></a>
                                         </td>
                                     </tr>
@@ -574,7 +574,8 @@
                                         <td>(313) 555-5735</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><span data-toggle="tooltip" title="Edit">編輯</span></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">刪除</span></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">下架</span></a>
+                                            <a href="#pictureUploadModal" data-toggle="modal"><span data-toggle="tooltip" title="Delete">上傳圖片</span></a>
                                         </td>
                                     </tr>
 
@@ -592,7 +593,8 @@
                                         <td>(503) 555-9931</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><span data-toggle="tooltip" title="Edit">編輯</span></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">刪除</span></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">下架</span></a>
+                                            <a href="#pictureUploadModal" data-toggle="modal"><span data-toggle="tooltip" title="Delete">上傳圖片</span></a>
                                         </td>
                                     </tr>
                                     <!-- 4. -->
@@ -609,7 +611,8 @@
                                         <td>(204) 619-5731</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><span data-toggle="tooltip" title="Edit">編輯</span></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">刪除</span></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">下架</span></a>
+                                            <a href="#pictureUploadModal" data-toggle="modal"><span data-toggle="tooltip" title="Delete">上傳圖片</span></a>
                                         </td>
                                     </tr>
                                     <!-- 5. -->
@@ -626,7 +629,8 @@
                                         <td>(480) 631-2097</td>
                                         <td>
                                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><span data-toggle="tooltip" title="Edit">編輯</span></a>
-                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">刪除</span></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><span data-toggle="tooltip" title="Delete">下架</span></a>
+                                            <a href="#pictureUploadModal" data-toggle="modal"><span data-toggle="tooltip" title="Delete">上傳圖片</span></a>
                                         </td>
                                     </tr> 
                                 </tbody>
@@ -673,10 +677,10 @@
                                         <label>價格</label>
                                         <input type="number" class="form-control" required>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label>數量</label>
                                         <input type="number" class="form-control" required>
-                                    </div>
+                                    </div> -->
                                     <div>圖片<br>
                                         <input name="product_img_1" type="file" accept="image/gif, image/jpeg, image/png" style="padding: 3px;">
                                         <input name="product_img_2" type="file" accept="image/gif, image/jpeg, image/png" style="padding: 3px;">
@@ -685,8 +689,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                    <input type="submit" class="btn btn-success" value="Add">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="取消">
+                                    <input type="submit" class="btn btn-success" value="確定上架">
                                 </div>
                             </form>
                         </div>
@@ -715,14 +719,14 @@
                                         <label>價格</label>
                                         <input type="number" class="form-control" required>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label>數量</label>
                                         <input type="number" class="form-control" required>
-                                    </div>					
+                                    </div>					 -->
                                 </div>
                                 <div class="modal-footer">
-                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                    <input type="submit" class="btn btn-info" value="Save">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="取消">
+                                    <input type="submit" class="btn btn-info" value="儲存">
                                 </div>
                             </form>
                         </div>
@@ -735,16 +739,16 @@
                         <div class="modal-content">
                             <form>
                                 <div class="modal-header">						
-                                    <h4 class="modal-title">刪除商品</h4>
+                                    <h4 class="modal-title">下架商品</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                 </div>
                                 <div class="modal-body">					
-                                    <p>確定刪除？</p>
-                                    <p class="text-warning"><small style="color: red;">注意：商品一經刪除無法回復</small></p>
+                                    <p>確定下架？</p>
+                                    <p class="text-warning"><small style="color: red;">注意：商品一經下架無法回復</small></p>
                                 </div>
                                 <div class="modal-footer">
-                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                                    <input type="submit" class="btn btn-danger" value="Delete">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="取消">
+                                    <input type="submit" class="btn btn-danger" value="確定下架">
                                 </div>
                             </form>
                         </div>
