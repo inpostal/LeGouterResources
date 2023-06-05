@@ -18,18 +18,26 @@
             display: flex;
             align-items: center;
         }
-    
+
         .form-row .remember-login {
             margin-left: 60px;
         }
-        #showlogin {
-        color: #007BFF;
-        transition: color 0.01s;
-    }
 
-    #showlogin:active {
-        color:  #EA6636 ;
-    }
+        #showlogin {
+            color: #007BFF;
+            transition: color 0.01s;
+        }
+
+        #showlogin:active {
+            color: #EA6636;
+        }
+
+        .col+.col::before {
+            content: "-";
+            position: absolute;
+            margin-left: -15px;
+            margin-top: 7px;
+        }
     </style>
 
     <!-- Bootstrap CSS -->
@@ -82,7 +90,7 @@
 </head>
 
 <body>
-    
+
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
@@ -186,7 +194,7 @@
         <div class="container container-default-2 custom-container">
             <div class="row">
                 <div class="col-12">
-                    
+
                     <div class="coupon-accordion">
                         <h3>已經是會員? <span id="showlogin">點擊此處登入</span></h3>
                         <div id="checkout-login" class="coupon-content">
@@ -210,7 +218,7 @@
                             </div>
                         </div>
                     </div>
- 
+
                 </div>
             </div>
             <div class="row">
@@ -343,24 +351,49 @@
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="payment-2"
                                             data-parent="#accordion">
-                                            <!-- 信用卡内容 -->
+                                            <div class="accordion-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label class="form-label">信用卡卡號</label>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" maxlength="4"
+                                                                    oninput="moveToNextInput(1)">
+                                                            </div>
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" maxlength="4"
+                                                                    oninput="moveToNextInput(2)">
+                                                            </div>
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" maxlength="4"
+                                                                    oninput="moveToNextInput(3)">
+                                                            </div>
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" maxlength="4"
+                                                                    oninput="moveToNextInput(4)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label class="form-label">持卡人姓名</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">卡片到期日</label>
+                                                            <input type="text" class="form-control" placeholder="MM/YY">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="form-label">信用卡認證碼</label>
+                                                            <input type="text" class="form-control" placeholder="XXX">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="card-header" id="payment-3">
-                                            <h5 class="panel-title mb-2">
-                                                <a href="#" class="payment-option" data-toggle="collapse"
-                                                    data-target="#collapseThree" aria-expanded="false"
-                                                    aria-controls="collapseThree">
-                                                    LINEPAY
-                                                </a>
-                                            </h5>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="payment-3"
-                                            data-parent="#accordion">
-                                            <!-- LINEPAY内容 -->
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div class="order-button-payment">
                                     <input value="提交訂單" type="submit">
@@ -437,6 +470,29 @@
         </div>
     </div>
     <!-- Footer Area End Here -->
+
+
+    <!-- 信用卡卡號填完自動跳下一格 -->
+
+    <script>
+        function moveToNextInput(nextInputIndex) {
+            const inputs = document.querySelectorAll('input[maxlength="4"]');
+            const currentIndex = nextInputIndex - 1;
+            const nextIndex = currentIndex + 1;
+
+            if (nextIndex < inputs.length) {
+                const currentInput = inputs[currentIndex];
+                const nextInput = inputs[nextIndex];
+                const maxLength = parseInt(currentInput.getAttribute("maxlength"));
+                const inputLength = currentInput.value.length;
+
+                if (inputLength >= maxLength) {
+                    nextInput.focus();
+                }
+            }
+        }
+    </script>
+
     <script data-cfasync="false" src="static/js/email-decode.min.js"></script>
     <script src="static/js/jquery-3.4.1.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
     <script src="static/js/bootstrap.bundle.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
