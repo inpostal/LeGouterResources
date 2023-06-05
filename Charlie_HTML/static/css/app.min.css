@@ -13711,7 +13711,7 @@ a.avatar:hover {
 }
 
 .auth {
-    background-color: #ff6e40
+    background-color: #EAA636
 }
 
 .auth .form-wrapper {
@@ -15312,7 +15312,7 @@ body.hidden-menu .layout-wrapper {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-left: 350px;
+    margin-left: 50px;
     min-height: 100vh
 }
 
@@ -15320,7 +15320,7 @@ body.hidden-menu .layout-wrapper {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding: 1.5rem
+    padding: 1rem
 }
 
 body.dark {
