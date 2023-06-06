@@ -47,7 +47,7 @@ footer {
 #main-container {
     border: 2.5px var(--dark) solid;
     border-radius: 5px;
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: var(--light);
     opacity: 0.9;
@@ -64,7 +64,6 @@ footer {
 #msg-container {
     border: 2.5px var(--dark) solid;
     width: 80%;
-    height: 80vh;
 }
 
 #ul {
@@ -162,6 +161,7 @@ footer {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #update:hover {
