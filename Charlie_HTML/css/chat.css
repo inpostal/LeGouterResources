@@ -10,7 +10,7 @@
 
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
 }
 
 /* 滚动槽 */
@@ -20,9 +20,9 @@
 
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #8C85E6;
-    -webkit-box-shadow: #8C85E6;
+    border-radius: 100px;
+    background: #f8d3ae;
+    -webkit-box-shadow: #6c757d;
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
