@@ -9,7 +9,7 @@ function searchOrders() {
 
   for (var i = 0; i < tr.length; i++) {
     var tdOrderNumber = tr[i].getElementsByTagName("td")[1]; // 訂單編號欄位
-    var tdProductName = tr[i].getElementsByTagName("td")[3]; // 產品名稱欄位
+    var tdProductName = tr[i].getElementsByTagName("td")[4]; // 產品名稱欄位
 
     if (tdOrderNumber && tdProductName) {
       var orderNumber = tdOrderNumber.textContent || tdOrderNumber.innerText;
@@ -25,7 +25,7 @@ function searchOrders() {
   }
 
   if (!hasResults) {
-    noResultsMessage.style.display = "block"; // 顯示 "查無此訂單" 的訊息
+    noResultsMessage.style.display = "block"; // 顯示 "查無此課程" 的訊息
   } else {
     noResultsMessage.style.display = "none"; // 隱藏訊息
   }

@@ -177,76 +177,69 @@
       </div>
       <hr>
       <div class="order-item-body">
-        <div class="course-info">
-          <img src="course-image.jpg" alt="A課程圖片">
-          <div>
-            <p class="course-title">課程 A     								價格</p>
-          </div>
-        </div>
-        <hr>
-        <div class="view-details-button">
-          <button class="toggle-details-button" onclick="toggleDetails(this)">查看明細</button>
-        </div>
-        <div class="order-details-content">
-			<!-- <img src="course-image.jpg" alt="B課程圖片"> -->
-          <div>
+		<div class="course-info">		  
+		  <div>
+			<img src="course-image.jpg" alt="A課程圖片">
+			<p class="course-title">課程 A 價格</p>
+		  </div>
+		</div>
+		<hr>
+		<div id="details1" class="order-details-content" style="display: none;">
+		  <div>
 			<img src="course-image.jpg" alt="C課程圖片">
-            <p class="course-title">課程 C     								價格</p>
-          </div>
+			<p class="course-title">課程 C 價格</p>
+		  </div>
 		  <hr>
 		  <div>
 			<img src="course-image.jpg" alt="B課程圖片">
-            <p class="course-title">課程 B     								價格</p>
-          </div>
-          <!-- <h3>課程詳細資訊</h3>
-          <p>課程 A 的詳細描述內容...</p>
-          <p>教師信息：教師姓名</p>
-          <p>課程特點：特點一、特點二、特點三...</p> -->
-          <!-- 其他相關內容 -->
-        </div>
-      </div>
-    </div>
-  </div>
-  
+			<p class="course-title">課程 B 價格</p>
+		  </div>
+		</div>
+		<div class="view-details-button">
+		  <button class="toggle-details-button" onclick="toggleDetails('details1', this)">查看明細</button>
+		</div>
+	  </div>
+	  </div>
+	  </div>
+	  
 	  <div class="order-info">
-		<div class="order-item">
-		  <div class="order-item-header">
+	  <div class="order-item">
+		<div class="order-item-header">
+		  <div>
+			<p><strong>訂單成立：</strong>2000-7-8 23:22:22</p>
+			<p><strong>付款時間：</strong>2000-7-9 14:22:22</p>
+		  </div>
+		  <div>
+			<p><strong>付款方式：</strong>信用卡</p>
+			<p><strong>實付金額：</strong>NT$999</p>
+		  </div>
+		</div>
+		<hr>
+		<div class="order-item-body">
+		  <div class="course-info">			
 			<div>
-			  <p><strong>訂單成立：</strong>2000-7-8 23:22:22</p>
-			  <p><strong>付款時間：</strong>2000-7-9 14:22:22</p>
-			</div>
-			<div>
-			  <p><strong>付款方式：</strong>信用卡</p>
-			  <p><strong>實付金額：</strong>NT$999</p>
+				<img src="course-image.jpg" alt="F課程圖片">
+			  <p class="course-title">課程 F 價格</p>
 			</div>
 		  </div>
 		  <hr>
-		  <div class="order-item-body">
-			<div class="course-info">
-			  <img src="course-image.jpg" alt="F課程圖片">
-			  <div>
-				<p class="course-title">課程 F     								價格</p>
-			  </div>
+		  <div id="details2" class="order-details-content" style="display: none;">
+			<div>
+			  <img src="course-image.jpg" alt="D課程圖片">
+			  <p class="course-title">課程 D 價格</p>
 			</div>
 			<hr>
-			<div class="view-details-button">
-			  <button class="toggle-details-button" onclick="toggleDetails(this)">查看明細</button>
-			</div>
 			<div>
-				<img src="course-image.jpg" alt="D課程圖片">
-				<p class="course-title">課程 D     								價格</p>
-			  <hr>
-			  
-				<img src="course-image.jpg" alt="E課程圖片">
-				<p class="course-title">課程 E     								價格</p>
+			  <img src="course-image.jpg" alt="E課程圖片">
+			  <p class="course-title">課程 E 價格</p>
 			</div>
-			<!-- <div class="order-details-content">
-			  <h3>課程詳細資訊</h3>
-			  <p>課程 B 的詳細描述內容...</p>
-			  <p>教師信息：教師姓名</p>
-			  <p>課程特點：特點一、特點二、特點三...</p>
-			  其他相關內容 -->
-			</div>
+		  </div>
+		  <div class="view-details-button">
+			<button class="toggle-details-button" onclick="toggleDetails('details2', this)">查看明細</button>
+		  </div>
+		</div>
+	  </div>
+	  </div>
 		  </div>
 		</div>
 	  </div>	  

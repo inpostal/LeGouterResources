@@ -1,8 +1,10 @@
-function toggleDetails(button) {
-    var content = button.parentElement.nextElementSibling;
-    if (window.getComputedStyle(content).display === "none") {
-      content.style.display = "block";
-    } else {
-      content.style.display = "none";
-    }
+function toggleDetails(id, button) {
+  var details = document.getElementById(id);
+  if (details.style.display === "none") {
+    details.style.display = "block";
+    button.innerText = "收起明細";
+  } else {
+    details.style.display = "none";
+    button.innerText = "查看明細";
   }
+}
