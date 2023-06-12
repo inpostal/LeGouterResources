@@ -125,52 +125,54 @@
             </section>
             <hr id="msg-container-hr">
             <section id="msg-container-main">
-                <table id="member-data-table">
-                    <tr>
-                        <th>資訊</th>
-                        <th>內容</th>
-                    </tr>
-                    <tr>
-                        <td>會員分類</td>
-                        <td>一般會員</td>
-                    </tr>
-                    <tr>
-                        <td>會員姓名</td>
-                        <td>Sam</td>
-                    </tr>
-                    <tr>
-                        <td>帳號</td>
-                        <td>account</td>
-                    </tr>
-                    <tr>
-                        <td>密碼</td>
-                        <td>*********</td>
-                    </tr>
-                    <tr>
-                        <td>性別</td>
-                        <td>男</td>
-                    </tr>
-                    <tr>
-                        <td>電話</td>
-                        <td>0987654321</td>
-                    </tr>
-                    <tr>
-                        <td>信箱</td>
-                        <td>sam123456@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>地址</td>
-                        <td>新北市永和區xx路xx街xx號xx樓</td>
-                    </tr>
-                    <tr>
-                        <td>生日</td>
-                        <td>1998-04-15</td>
-                    </tr>
-                    <tr>
-                        <td>註冊時間</td>
-                        <td>2023-06-03</td>
-                    </tr>
-                </table>
+                <form action="">
+                    <table id="member-data-table">
+                        <tr>
+                            <th>資訊</th>
+                            <th>內容</th>
+                        </tr>
+                        <tr>
+                            <td>會員分類</td>
+                            <td>一般會員</td>
+                        </tr>
+                        <tr>
+                            <td>會員姓名</td>
+                            <td id="name-cell">Sam</td>
+                        </tr>
+                        <tr>
+                            <td>帳號</td>
+                            <td>account</td>
+                        </tr>
+                        <tr>
+                            <td>密碼</td>
+                            <td id="password-cell">*********</td>
+                        </tr>
+                        <tr>
+                            <td>性別</td>
+                            <td id="gender-cell">男</td>
+                        </tr>
+                        <tr>
+                            <td>電話</td>
+                            <td id="phone-cell">0987654321</td>
+                        </tr>
+                        <tr>
+                            <td>信箱</td>
+                            <td>sam123456@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>地址</td>
+                            <td id="address-cell">新北市永和區xx路xx街xx號xx樓</td>
+                        </tr>
+                        <tr>
+                            <td>生日</td>
+                            <td>1998-04-15</td>
+                        </tr>
+                        <tr>
+                            <td>註冊時間</td>
+                            <td>2023-06-03</td>
+                        </tr>
+                    </table>
+                </form>
                 <button type="text" id="update">修改會員資料</button>
             </section>
         </section>
@@ -250,76 +252,7 @@
         </div>
     </div>
 
-    <script>
-        window.onload = function () {
-            document.getElementById('update').addEventListener('click', function () {
-                var button = document.getElementById('update');
-                var infoItems = ['name', 'account', 'gender', 'phone', 'email', 'address'];
-
-                if (button.textContent === '修改會員資料') {
-                    infoItems.forEach(function (item) {
-                        var span = document.getElementById(item);
-                        var input = document.getElementById(item + '-input');
-                        var parentDiv = input.parentNode;
-                        input.value = span.textContent;
-                        input.classList.add('on');
-                        span.classList.add('-on');
-                        parentDiv.style.display = 'flex';
-                    });
-                    button.textContent = '修改完成';
-                } else {
-                    infoItems.forEach(function (item) {
-                        var span = document.getElementById(item);
-                        var input = document.getElementById(item + '-input');
-                        var parentDiv = input.parentNode;
-                        span.textContent = input.value;
-                        input.classList.remove('on');
-                        span.classList.remove('-on');
-                        parentDiv.style.display = '';
-                    });
-                    button.textContent = '修改會員資料';
-                }
-            });
-
-            // 側邊欄位動畫
-            function leftSide(liid, subUlid) {
-                document.getElementById(liid).addEventListener("click", function () {
-                    var subUl = document.getElementById(subUlid);
-                    if (subUl.getAttribute("class") === "hide") {
-                        subUl.setAttribute("class", "show");
-                    } else {
-                        subUl.setAttribute("class", "hide");
-                    }
-                });
-            }
-
-            leftSide("dessert", "subUl1");
-            leftSide("member-class", "subUl2");
-            leftSide("member-group", "subUl3");
-
-
-
-
-
-            // document.getElementById("update").addEventListener("click", function () {
-            //     // 獲取需要修改的元素
-            //     const items = ["address", "email", "phone", "gender", "account", "name"];
-            //     // 遍歷每個元素
-            //     for (let item of items) {
-            //         // 獲取span和input元素
-            //         const span = document.getElementById(item);
-            //         const input = document.getElementById(item + "-input");
-            //         // 更新類別
-            //         span.className = "-on";
-            //         input.className = "on";
-            //         // 複製值
-            //         input.value = span.textContent;
-            //     }
-            //     // 改變按鈕的名稱
-            //     this.textContent = "修改完成";
-            // });
-        };
-    </script>
+    <script src="./Sam_Js/MemberData.js"></script>
     <script data-cfasync="false" src="static/js/email-decode.min.js"></script>
     <script src="static/js/jquery-3.4.1.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
     <script src="static/js/bootstrap.bundle.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>

@@ -18,6 +18,41 @@ body {
     font-family: Arial, sans-serif;
 }
 
+input {
+    padding: 5px;
+    border: 1px var(--dark) solid;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--dark);
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--primary);
+}
+
+input::placeholder {
+    color: var(--dark);
+}
+
+select {
+    padding: 5px;
+    border: 1px var(--dark) solid;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--dark);
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid var(--primary);
+}
+
+option {
+    color: var(--secondary);
+    background: var(--light);
+}
+
 .container {
     max-width: 500px;
     margin: auto;
@@ -147,6 +182,13 @@ footer {
 #msg-container-main {
     /* border: 1px red solid; */
     height: calc(100% - 66.4px - 21px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
