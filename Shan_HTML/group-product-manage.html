@@ -363,8 +363,6 @@
                     <div id="tab01" class="tab-inner">
                         <!-- tab01的內容 -->
                         <form action="" target="_blank">
-                            <label class="inpproduct">團購商品編號：<input type="text" name="groupproductid" value=""
-                                    required></label>
                             <label class="inpproduct">團購商品名稱：<input type="text" name="groupproductname" value=""
                                     required></label>
                             <textarea class="inpproduct" id="textarea" name="groupproductcontent" cols="50" rows="8"
@@ -375,6 +373,11 @@
                                     placeholder="yyyy-mm-dd" required></label>
                             <input type="radio" class="inpproduct" name="groupproductstatus" value="true"
                                 style="display: none;">
+                            <label class="inpproduct">上傳圖片</label>
+                            <input type="file" style="margin-top: 10px;">
+                            <input type="file" style="margin-top: 10px;">
+                            <input type="file" style="margin-top: 10px;">
+                            <input type="file" style="margin-top: 10px;">
                             <button type="submit" class="inpproduct">新增</button>
                             <button type="reset" class="inpproduct">清除</button>
                         </form>
@@ -385,7 +388,7 @@
                             <form action="" method="post">
                                 <fieldset style="margin: 10px;">
                                     <legend>過濾商品名稱</legend>
-                                    <label>輸入關鍵字</label><input type="search" name="">
+                                    <label>商品名稱：</label><input type="search" placeholder="輸入關鍵字" name="">
                                     <button type="submit">搜尋</button>
                                 </fieldset>
                             </form>
@@ -413,21 +416,7 @@
                                         <td>true</td>
                                         <td>
                                             <div class="dropdown">
-                                                <button type="button" class="btn btn-success" data-bs-toggle="dropdown">
-                                                    <svg width="20px" height="20px" viewbox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none"
-                                                            fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                            <circle fill="#000000" cx="5" cy="12" r="2"></circle>
-                                                            <circle fill="#000000" cx="12" cy="12" r="2"></circle>
-                                                            <circle fill="#000000" cx="19" cy="12" r="2"></circle>
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">編輯</a>
-                                                    <a class="dropdown-item" href="#">刪除</a>
-                                                </div>
+                                                <button type="button" class="btn btn-success">編輯</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -441,21 +430,7 @@
                                         <td>true</td>
                                         <td>
                                             <div class="dropdown">
-                                                <button type="button" class="btn btn-success" data-bs-toggle="dropdown">
-                                                    <svg width="20px" height="20px" viewbox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none"
-                                                            fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                            <circle fill="#000000" cx="5" cy="12" r="2"></circle>
-                                                            <circle fill="#000000" cx="12" cy="12" r="2"></circle>
-                                                            <circle fill="#000000" cx="19" cy="12" r="2"></circle>
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">編輯</a>
-                                                    <a class="dropdown-item" href="#">刪除</a>
-                                                </div>
+                                                <button type="button" class="btn btn-success">編輯</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -469,21 +444,7 @@
                                         <td>true</td>
                                         <td>
                                             <div class="dropdown">
-                                                <button type="button" class="btn btn-success" data-bs-toggle="dropdown">
-                                                    <svg width="20px" height="20px" viewbox="0 0 24 24" version="1.1">
-                                                        <g stroke="none" stroke-width="1" fill="none"
-                                                            fill-rule="evenodd">
-                                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                                            <circle fill="#000000" cx="5" cy="12" r="2"></circle>
-                                                            <circle fill="#000000" cx="12" cy="12" r="2"></circle>
-                                                            <circle fill="#000000" cx="19" cy="12" r="2"></circle>
-                                                        </g>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">編輯</a>
-                                                    <a class="dropdown-item" href="#">刪除</a>
-                                                </div>
+                                                <button type="button" class="btn btn-success">編輯</button>
                                             </div>
                                         </td>
                                     </tr>

@@ -74,6 +74,7 @@
 
         .filter-item {
             display: inline-block;
+            margin: 10px;
         }
 
         .table {
@@ -304,30 +305,23 @@
                     <div class="filter">
                         <div class="filter-item">
                             <form action="" method="post">
-                                <fieldset>
-                                    <legend>過濾活動內容</legend>
-                                    <label>輸入關鍵字</label><input type="search" name="groupactivitycontent">
-                                    <button type="submit">搜尋</button>
-                                </fieldset>
+                                <legend>過濾條件</legend>
+                                <label>活動內容：</label><input type="search" placeholder="輸入關鍵字"
+                                    name="groupactivitycontent">
+                                <button type="submit">搜尋</button>
                             </form>
                         </div>
                         <div class="filter-item">
                             <form action="" method="post">
-                                <fieldset>
-                                    <legend class="">過濾日期</legend>
-                                    <label>選擇開始日期</label> <input type="date" name="grouporderstar">
-                                    <label>選擇結束日期</label> <input type="date" name="grouporderend">
-                                    <button type="submit">搜尋</button>
-                                </fieldset>
+                                <label>活動名稱：</label><input type="search" placeholder="輸入關鍵字" name="groupname">
+                                <button type="submit">搜尋</button>
                             </form>
                         </div>
                         <div class="filter-item">
                             <form action="" method="post">
-                                <fieldset>
-                                    <legend>過濾活動名稱</legend>
-                                    <label>輸入關鍵字</label><input type="search" name="groupname">
-                                    <button type="submit">搜尋</button>
-                                </fieldset>
+                                <label>選擇開始日期</label> <input type="date" name="grouporderstar">
+                                <label>選擇結束日期</label> <input type="date" name="grouporderend">
+                                <button type="submit">搜尋</button>
                             </form>
                         </div>
                     </div>
@@ -336,14 +330,15 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="width:120px;"><strong>活動編號</strong></th>
+                                        <th style="width:100px;"><strong>活動編號</strong></th>
                                         <th style="width:120px;"><strong>團購商品編號</strong></th>
                                         <th style="width:200px;"><strong>活動內容</strong></th>
-                                        <th style="width:120px;"><strong>團購開始日期</strong></th>
-                                        <th style="width:120px;"><strong>團購結束日期</strong></th>
+                                        <th style="width:100px;"><strong>開始日期</strong></th>
+                                        <th style="width:100px;"><strong>結束日期</strong></th>
                                         <th style="width:120px;"><strong>團購數量低標</strong></th>
                                         <th style="width:180px;"><strong>活動名稱</strong></th>
                                         <th style="width:120px;"><strong>團購商品折扣</strong></th>
+                                        <th style="width:120px;"><strong>團購狀態</strong></th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -357,6 +352,7 @@
                                         <td>200</td>
                                         <td>世界肉桂捲日</td>
                                         <td>0.90</td>
+                                        <td></td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-success" data-bs-toggle="dropdown">
@@ -386,6 +382,7 @@
                                         <td>200</td>
                                         <td>布丁節</td>
                                         <td>0.90</td>
+                                        <td></td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-success" data-bs-toggle="dropdown">
@@ -415,6 +412,7 @@
                                         <td>200</td>
                                         <td>波士頓派宇宙</td>
                                         <td>0.90</td>
+                                        <td></td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn btn-success" data-bs-toggle="dropdown">
